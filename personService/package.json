@@ -1,0 +1,26 @@
+{
+  "name": "personService",
+  "version": "0.0.1",
+  "description": "tdp024",
+  "main": "app.js",
+  "dependencies": {
+    "express": "~4.14.0",
+    "nodemon": "~1.10.2",
+    "express-jwt": "~5.0.0",
+    "request": "~2.74.0",
+    "shortid": "~2.2.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.ida.liu.se/emini901/tdp024.git"
+  },
+  "keywords": [
+    "descriptsisod"
+  ],
+  "author": "sd",
+  "license": "BSD-2-Clause"
+}
