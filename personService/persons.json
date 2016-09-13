@@ -1,0 +1,30 @@
+[
+{ "firstname": "Tommy",
+  "lastname": "Lindman",
+  "fullname": "Tommy Lindman",
+  "pnr": "800101-0010",
+  "key": "9asd8awdj2",
+  "id": 1
+  },
+{ "firstname": "Charles",
+  "lastname": "Xavier",
+  "fullname": "Charles Xavier",
+  "pnr": "100101-0010",
+  "key": "9a492awdj2",
+  "id": 2
+  },
+{ "firstname": "Emil",
+  "lastname": "Nilsson",
+  "fullname": "Emil Nilsson",
+  "pnr": "890101-0010",
+  "key": "9a9123wdj2",
+  "id": 3
+  },
+{ "firstname": "Wruce",
+  "lastname": "Bayne",
+  "fullname": "Wruce Bayne",
+  "pnr": "700101-0010",
+  "key": "a9123822as",
+  "id": 4
+  }]
+    
