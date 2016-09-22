@@ -28,9 +28,22 @@ app.get('/person/list', function(req, res) {
     res.send(obj);
 });
 
-app.get('person/find.name', function(req, res) {
+app.get('/person/find.name', function(req, res) {
     console.log('person/find.name called');
-    
+    var name = req.query.name;
+    console.log("The name is: " + name);
+    var result = findByName(name);
+    res.send(result);
+});
+
+
+
+app.get('/person/find.key', function(req, res) {
+    console.log('person/find.key called');
+    var key = req.query.key;
+    console.log("The key is: " + key);
+    var result = findByKey(key);
+    res.send(result);
 });
 
 
@@ -59,8 +72,41 @@ server.listen(app.get('port'), function() {
 
 
 
-function findPersons() {
+function findByName(name) {
+    console.log("\nfindByName called with: " + name);
+    var jsonPersons = JSON.parse(fs.readFileSync('persons.json', 'utf8'));
+    var result = [];
+    for(var person in jsonPersons) {
+	console.log(jsonPersons[person]);
+	if(jsonPersons[person].fullname == name) {
+	    result.push(jsonPersons[person]);
+	}
+    }
+    
+    if(result.length == 0) {
+	result = 'null';
+    }
+    
+    return result;
+}
 
+
+function findByKey(key) {
+    console.log("\nfindByKey called with: " + key);
+    var jsonPersons = JSON.parse(fs.readFileSync('persons.json', 'utf8'));
+    var result = [];
+    for(var person in jsonPersons) {
+	console.log(jsonPersons[person]);
+	if(jsonPersons[person].key == key) {
+	    result.push(jsonPersons[person]);
+	}
+    }
+    
+    if(result.length == 0) {
+	result = 'null';
+    }
+    
+    return result;
 }
 
 
