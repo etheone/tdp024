@@ -21,7 +21,7 @@ public class AccountDB implements Account {
     private String accountType;
     private long holdings;
     
-    @OneToMany(mappedBy = "transaction", targetEntity = TransactionDB.class)
+    @OneToMany(mappedBy = "account", targetEntity = TransactionDB.class)
     private List<Transaction> transactions;
     
     @Override

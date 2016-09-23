@@ -3,6 +3,7 @@ package se.liu.ida.tdp024.account.data.impl.db.facade;
 import java.util.List;
 import java.util.ServiceConfigurationError;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
@@ -15,8 +16,9 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     public long create(String personKey, String accountType, String bankKey) {
         
         EntityManager em = EMF.getEntityManager();
-        
         try {
+            
+            em.getTransaction().begin();
             
             Account account = new AccountDB();
             account.setPersonKey(personKey);
@@ -33,7 +35,8 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
         } catch (Exception e) {
             
             //Log stuff
-            throw new ServiceConfigurationError("Commit failed");
+            e.printStackTrace();
+            throw new ServiceConfigurationError("dfgdg failed");
             
         } finally {
             
@@ -64,7 +67,8 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
         EntityManager em = EMF.getEntityManager();
         
         try {
-            Query query = em.createQuery("SELECT t from AccountDB t WHERE t.personKey = " + personKey);
+            Query query = em.createQuery("SELECT t from AccountDB t WHERE t.personKey = :pk");
+            query.setParameter("pk", personKey);
             return query.getResultList();
         } catch(Exception e) {
             //log

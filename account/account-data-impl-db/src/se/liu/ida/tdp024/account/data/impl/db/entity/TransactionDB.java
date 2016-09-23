@@ -5,6 +5,7 @@
  */
 package se.liu.ida.tdp024.account.data.impl.db.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,6 +17,7 @@ import se.liu.ida.tdp024.account.data.api.entity.Transaction;
  *
  * @author emini901, tomli962
  */
+@Entity
 public class TransactionDB implements Transaction {
 
     @Id
