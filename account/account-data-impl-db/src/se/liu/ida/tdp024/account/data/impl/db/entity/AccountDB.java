@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
+import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 
 @Entity
 public class AccountDB implements Account {
@@ -21,7 +22,7 @@ public class AccountDB implements Account {
     private long holdings;
     
     @OneToMany(mappedBy = "transaction", targetEntity = TransactionDB.class)
-    private List<Todo> transactions;
+    private List<Transaction> transactions;
     
     @Override
     public long getId() {
