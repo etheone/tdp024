@@ -12,9 +12,6 @@ public interface AccountEntityFacade {
     
     public String getType(long id);
     
-    // withdraw and deposit will most likely be removed
-    // sinced we added the transaction class
-    // Theese two functions are not tested
     public void withdraw(long id, long amount);
     
     public void deposit(long id, long amount);

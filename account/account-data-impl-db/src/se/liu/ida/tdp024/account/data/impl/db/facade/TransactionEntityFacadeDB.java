@@ -69,11 +69,12 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade{
     }
 
     @Override
-    public List<Transaction> findAll(Account account) {
+    public List<Transaction> findAll(long id) {
         EntityManager em = EMF.getEntityManager();
         
         try {
-            Query query = em.createQuery("SELECT t from TransactionDB t WHERE t.account.id = " + account.getId());
+            Query query = em.createQuery("SELECT t from TransactionDB t WHERE t.account.id = :id");
+            query.setParameter("id", id);
             return query.getResultList();
         } catch(Exception e) {
             //log

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.ServiceConfigurationError;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.LockModeType;
 import javax.persistence.Query;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
@@ -34,9 +35,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             
         } catch (Exception e) {
             
-            //Log stuff
-            e.printStackTrace();
-            throw new ServiceConfigurationError("dfgdg failed");
+            throw new ServiceConfigurationError("commit failed");
             
         } finally {
             
@@ -92,25 +91,58 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
 
     @Override
     public void withdraw(long id, long amount) {
-        
+        EntityManager em = EMF.getEntityManager();
+        try {
+            em.getTransaction().begin();
+            
+            Account account = em.find(AccountDB.class, id, LockModeType.PESSIMISTIC_WRITE);
+            account.setHoldings(account.getHoldings() - amount);
+            
+            em.merge(account);
+            
+            em.getTransaction().commit();
+            
+        } catch(Exception e) {
+            //logg stuff
+        } finally {
+            if (em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+
+            em.close();
+        }
+        /*
         try {
             Account account = find(id);
             account.setHoldings(account.getHoldings() - amount);
             
         } catch(Exception e) {
             //logg stuff
-        }
+        }*/
   
     }
 
     @Override
     public void deposit(long id, long amount) {
+        EntityManager em = EMF.getEntityManager();
         try {
-            Account account = find(id);
+            em.getTransaction().begin();
+            
+            Account account = em.find(AccountDB.class, id, LockModeType.PESSIMISTIC_WRITE);
             account.setHoldings(account.getHoldings() + amount);
+            
+            em.merge(account);
+            
+            em.getTransaction().commit();
             
         } catch(Exception e) {
             //logg stuff
+        } finally {
+            if (em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+
+            em.close();
         }
     }
 
