@@ -14,5 +14,5 @@ public interface TransactionEntityFacade {
     
     public Transaction find(long id);
     
-    public List<Transaction> findAll(Account account);
+    public List<Transaction> findAll(long id);
 }
