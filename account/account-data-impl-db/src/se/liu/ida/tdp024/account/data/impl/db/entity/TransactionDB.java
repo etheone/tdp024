@@ -26,7 +26,7 @@ public class TransactionDB implements Transaction {
     
     private String type;
     private long amount;
-    private String date;
+    private String dateOfTransaction;
     private String status;
     
     @ManyToOne(targetEntity = AccountDB.class)
@@ -64,12 +64,12 @@ public class TransactionDB implements Transaction {
 
     @Override
     public String getDate() {
-        return date;
+        return dateOfTransaction;
     }
 
     @Override
     public void setDate(String date) {
-        this.date = date;
+        this.dateOfTransaction = date;
     }
 
     @Override

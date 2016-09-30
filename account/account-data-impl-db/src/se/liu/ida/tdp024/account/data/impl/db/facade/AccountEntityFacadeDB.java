@@ -3,12 +3,13 @@ package se.liu.ida.tdp024.account.data.impl.db.facade;
 import java.util.List;
 import java.util.ServiceConfigurationError;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
 import javax.persistence.LockModeType;
 import javax.persistence.Query;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
+import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
 import se.liu.ida.tdp024.account.data.impl.db.entity.AccountDB;
+import se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB;
 import se.liu.ida.tdp024.account.data.impl.db.util.EMF;
 
 public class AccountEntityFacadeDB implements AccountEntityFacade {
@@ -46,6 +47,33 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
         }
     }
 
+    @Override
+    public void addTransaction(long accountId, long transactionId)
+    {
+        EntityManager em = EMF.getEntityManager();
+        
+        try {
+            em.getTransaction().begin();
+            
+            Account account = em.find(AccountDB.class, accountId);
+            
+            Transaction transaction = em.find(TransactionDB.class, transactionId);
+            transaction.setAccount(account);
+            
+            em.merge(transaction);
+            
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            // Log stuff
+            return;
+        } finally {
+            if (em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+            em.close();
+        }
+    }
+    
     @Override
     public Account find(long id) {
         
