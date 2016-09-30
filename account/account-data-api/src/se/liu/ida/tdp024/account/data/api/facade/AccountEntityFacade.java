@@ -6,6 +6,8 @@ import se.liu.ida.tdp024.account.data.api.entity.Account;
 public interface AccountEntityFacade {
     public long create(String personKey, String accountType, String bankKey);
     
+    public void addTransaction(long accountId, long transactionId);
+    
     public Account find(long id);
     
     public List<Account> findAll(String personKey);

@@ -72,4 +72,16 @@ public class AccountDB implements Account {
     public void setHoldings(long amount) {
         this.holdings = amount;
     }
+    
+    @Override
+    public List<Transaction> getTransactions()
+    {
+        return this.transactions;
+    }
+    
+    @Override
+    public void setTransactions(List<Transaction> transactions)
+    {
+        this.transactions = transactions;
+    }
 }
