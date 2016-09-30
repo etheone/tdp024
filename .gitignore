@@ -1,2 +1,3 @@
 **/node_modules
 /account/account-data-test/build/
+/account/account-logic-test/build/
