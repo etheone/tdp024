@@ -1,5 +1,6 @@
 package se.liu.ida.tdp024.account.logic.impl.facade;
 
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
 import se.liu.ida.tdp024.account.logic.api.facade.AccountLogicFacade;
@@ -20,6 +21,7 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         HTTPHelper httphelper = new HTTPHelperImpl();
         String response = httphelper.get("http://localhost:8060/person/find.name","name", personName);
         System.out.println();
+        JSONPObject json = new JSONPObject(response, this);
         System.out.println(response);
         System.out.println(response.substring(response.indexOf("key")+4, response.indexOf("key")+10));
         System.out.println();
