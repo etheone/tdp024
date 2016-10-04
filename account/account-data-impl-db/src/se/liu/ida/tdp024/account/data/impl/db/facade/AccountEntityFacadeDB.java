@@ -60,6 +60,14 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             Transaction transaction = em.find(TransactionDB.class, transactionId);
             transaction.setAccount(account);
             
+            if(transaction.getStatus().equals("OK")) {
+                if (transaction.getType().equals("debit"))  {
+                    withdraw(accountId, transaction.getAmount());
+                } else {
+                    deposit(accountId, transaction.getAmount());
+                }
+            }
+            
             em.merge(transaction);
             
             em.getTransaction().commit();

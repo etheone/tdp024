@@ -1,17 +1,37 @@
 [
- { "name": "Bank of LIU",
+ { "name": "CITIBANK",
    "id": 1,
    "key": "912asd291k"
    },
-   { "name": "Bank of Sverige",
+   { "name": "HSBC",
    "id": 2,
    "key": "291as1291k"
    },
-   { "name": "Jotenheim National Bank",
+   { "name": "SBAB",
    "id": 3,
    "key": "ad016727ak"
    },
-    { "name": "A big bank",
+    { "name": "IKANOBANKEN",
    "id": 4,
    "key": "91ad21s5ak"
+   },
+    { "name": "NORDEA",
+   "id": 5,
+   "key": "32141016727ak"
+   },
+    { "name": "SWEDBANK",
+   "id": 6,
+   "key": "ad0SD16727ak"
+   },
+    { "name": "NORDNET",
+   "id": 7,
+   "key": "a15d016727ak"
+   },
+    { "name": "JPMORGAN",
+   "id": 8,
+   "key": "ad016ASDF727ak"
+   },
+    { "name": "HANDELSBANKEN",
+   "id": 9,
+   "key": "ad0SAD9217ak"
    }]

@@ -34,4 +34,5 @@ public interface Transaction {
     public Account getAccount();
     
     public void setAccount(Account account); 
+    
 }
