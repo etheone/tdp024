@@ -4,9 +4,12 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import java.io.IOException;
+import java.util.List;
 import java.util.ServiceConfigurationError;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
+import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
+import se.liu.ida.tdp024.account.data.api.facade.TransactionEntityFacade;
 import se.liu.ida.tdp024.account.logic.api.facade.AccountLogicFacade;
 import se.liu.ida.tdp024.account.util.http.HTTPHelper;
 import se.liu.ida.tdp024.account.util.http.HTTPHelperImpl;
@@ -14,9 +17,11 @@ import se.liu.ida.tdp024.account.util.http.HTTPHelperImpl;
 public class AccountLogicFacadeImpl implements AccountLogicFacade {
     
     private AccountEntityFacade accountEntityFacade;
+    private TransactionEntityFacade transactionEntityFacade;
     
-    public AccountLogicFacadeImpl(AccountEntityFacade accountEntityFacade) {
+    public AccountLogicFacadeImpl(AccountEntityFacade accountEntityFacade, TransactionEntityFacade transactionEntityFacade) {
         this.accountEntityFacade = accountEntityFacade;
+        this.transactionEntityFacade = transactionEntityFacade;
     }
 
     @Override
@@ -35,10 +40,10 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         return id;
     }
 
-    @Override
+   /* @Override
     public void addTransaction(long accoundId, long transactionId) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }*/
 
     @Override
     public Account findByName(String name) {
@@ -90,5 +95,16 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         }
         return null;
     } 
+
+    @Override
+    public List<Account> findAllAccounts(String name) {
+        List<Account> allAccounts = accountEntityFacade.findAll(getPersonKey(name));
+        return allAccounts;
+    }
+
+    @Override
+    public List<Transaction> findAllTransactions(long accountId) {
+        return transactionEntityFacade.findAll(accountId);
+    }
     
 }

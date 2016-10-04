@@ -12,6 +12,8 @@ public interface TransactionLogicFacade {
     public long create(String type, long amount, 
             String date, String status, Account account);
     
+    public String addTransaction(long accoundId, long amount, String type);
+    
     public Transaction find(long id);
     
 }
