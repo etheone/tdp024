@@ -39,7 +39,10 @@ app.get('/bank/find.name', function(req, res) {
     var name = req.query.name;
     console.log("The name is: " + name);
     var result = findByName(name);
-    res.send(result);
+    if (result === 'null')
+	res.send(result);
+    else
+	res.send(result[0]);
 });
 
 
@@ -49,7 +52,10 @@ app.get('/bank/find.key', function(req, res) {
     var key = req.query.key;
     console.log("The key is: " + key);
     var result = findByKey(key);
-    res.send(result);
+    if (result === 'null')
+	res.send(result);
+    else
+	res.send(result[0]);
 });
 
 
@@ -84,11 +90,13 @@ function findByName(name) {
     for(var bank in jsonBanks) {
 	console.log(jsonBanks[bank]);
 	if(jsonBanks[bank].name == name) {
+	    console.log("Found it");
 	    result.push(jsonBanks[bank]);
 	}
     }
     
     if(result.length == 0) {
+	console.log("adfadfgsdfgsdFound it");
 	result = 'null';
     }
     

@@ -1,5 +1,6 @@
 package se.liu.ida.tdp024.account.logic.test.facade;
 
+import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Test;
 import se.liu.ida.tdp024.account.data.api.util.StorageFacade;
@@ -22,6 +23,8 @@ public class AccountLogicFacadeTest {
     
     @Test
     public void testCreate() {
-        accountLogicFacade.create("Tommy Lindman", "CHECK", "Swedbank");
+      
+        long id = accountLogicFacade.create("Tommy Lindman", "CHECK", "Bank of Sverige");
+        Assert.assertTrue(id != -1);
     }
 }
