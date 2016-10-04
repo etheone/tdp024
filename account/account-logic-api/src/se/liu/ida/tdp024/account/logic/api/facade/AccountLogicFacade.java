@@ -4,7 +4,7 @@ import se.liu.ida.tdp024.account.data.api.entity.Account;
 
 public interface AccountLogicFacade {
     
-    public void create(String personName, String accountType, String bankName);
+    public long create(String personName, String accountType, String bankName);
     
     public void addTransaction(long accoundId, long transactionId);
     

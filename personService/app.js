@@ -33,7 +33,10 @@ app.get('/person/find.name', function(req, res) {
     var name = req.query.name;
     console.log("The name is: " + name);
     var result = findByName(name);
-    res.send(result);
+    if (result === 'null')
+	res.send(result);
+    else
+	res.send(result[0]);
 });
 
 
@@ -43,18 +46,11 @@ app.get('/person/find.key', function(req, res) {
     var key = req.query.key;
     console.log("The key is: " + key);
     var result = findByKey(key);
-    res.send(result);
+    if (result === 'null')
+	res.send(result);
+    else
+	res.send(result[0]);
 });
-
-
-
-
-
-
-
-
-
-
 
 app.get('*', function(req, res) {
     console.log('Wildcard caught a connection');
@@ -71,7 +67,6 @@ server.listen(app.get('port'), function() {
 
 
 
-
 function findByName(name) {
     console.log("\nfindByName called with: " + name);
     var jsonPersons = JSON.parse(fs.readFileSync('persons.json', 'utf8'));
@@ -83,7 +78,7 @@ function findByName(name) {
 	}
     }
     
-    if(result.length == 0) {
+    if(result.length == 0) {;
 	result = 'null';
     }
     
