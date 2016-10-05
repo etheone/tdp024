@@ -29,5 +29,6 @@ public interface Account extends Serializable {
     
     public void setTransactions(List<Transaction> transactions);
     
-    //public void addTransaction(Transaction transaction);
+    public void addTransactionToAccount(Transaction t);
+    
 }
