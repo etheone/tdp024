@@ -34,7 +34,9 @@ public class TransactionTest {
 
 
         String accountJson = httpHelper.get(FinalConstants.ENDPOINT + "account/find/name", "name", "Marcus Bendtsen");
+        System.out.println(accountJson + "*****************");
         AccountDTO[] accountDTos = jsonSerializer.fromJson(accountJson, AccountDTO[].class);
+        
 
         AccountDTO accountDTO = accountDTos[0];
 
@@ -48,8 +50,10 @@ public class TransactionTest {
 
 
         String transactionJson = httpHelper.get(FinalConstants.ENDPOINT + "account/transactions", "id", accountDTO.getId() + "");
-
+        System.out.println("********************JSON****************");
+        System.out.println(transactionJson);
         TransactionDTO[] transactionsArray = jsonSerializer.fromJson(transactionJson, TransactionDTO[].class);
+        System.out.println(transactionsArray);
         List<TransactionDTO> transactions = new ArrayList<TransactionDTO>();
         for (TransactionDTO t : transactionsArray) {
             transactions.add(t);

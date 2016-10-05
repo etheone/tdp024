@@ -75,7 +75,10 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade{
         try {
             Query query = em.createQuery("SELECT t from TransactionDB t WHERE t.account.id = :id");
             query.setParameter("id", id);
-            return query.getResultList();
+            List<Transaction> queryList = query.getResultList();
+            System.out.println("****************************QUERYLIST*****************'");
+            System.out.println(queryList);
+            return queryList;
         } catch(Exception e) {
             //log
             return null;

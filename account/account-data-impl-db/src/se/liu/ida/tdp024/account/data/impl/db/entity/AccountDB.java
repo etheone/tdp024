@@ -84,4 +84,9 @@ public class AccountDB implements Account {
     {
         this.transactions = transactions;
     }
+    
+    @Override
+    public void addTransactionToAccount(Transaction t) {
+        this.transactions.add(t);
+    }
 }

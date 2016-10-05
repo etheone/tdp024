@@ -1,5 +1,6 @@
 package se.liu.ida.tdp024.account.data.impl.db.facade;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ServiceConfigurationError;
 import javax.persistence.EntityManager;
@@ -27,6 +28,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             account.setBankKey(bankKey);
             account.setAccountType(accountType);
             account.setHoldings(0);
+            account.setTransactions(new ArrayList<Transaction>());
             
             em.persist(account);
             em.getTransaction().commit();
@@ -60,6 +62,8 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             Transaction transaction = em.find(TransactionDB.class, transactionId);
             transaction.setAccount(account);
             
+            account.addTransactionToAccount(transaction);
+            
             if(transaction.getStatus().equals("OK")) {
                 if (transaction.getType().equals("debit"))  {
                     withdraw(accountId, transaction.getAmount());
@@ -68,6 +72,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
                 }
             }
             
+            em.merge(account);
             em.merge(transaction);
             
             em.getTransaction().commit();
@@ -192,6 +197,33 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             //logg stuff
             return -1; //fix later
         }
+    }
+
+    @Override
+    public List<Transaction> findAllTransactions(long accountId) {
+        List a = new ArrayList<Transaction>();
+        EntityManager em = EMF.getEntityManager();
+        try {
+            em.getTransaction().begin();
+            
+            Account account = em.find(AccountDB.class, accountId, LockModeType.PESSIMISTIC_READ);
+            
+            
+            return account.getTransactions();
+            
+         
+            
+        } catch(Exception e) {
+            //logg stuff
+            return a;
+        } finally {
+            if (em.getTransaction().isActive()) {
+                em.getTransaction().rollback();
+            }
+
+            em.close();
+        }
+        
     }
     
 }

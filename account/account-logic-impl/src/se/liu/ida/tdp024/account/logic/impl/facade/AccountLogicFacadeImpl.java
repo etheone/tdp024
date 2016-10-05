@@ -109,7 +109,8 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
 
     @Override
     public List<Transaction> findAllTransactions(long accountId) {
-        return transactionEntityFacade.findAll(accountId);
+        //return transactionEntityFacade.findAll(accountId);
+        return accountEntityFacade.findAllTransactions(accountId);
     }
     
 }
