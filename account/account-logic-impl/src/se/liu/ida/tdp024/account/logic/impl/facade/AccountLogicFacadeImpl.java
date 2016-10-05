@@ -2,7 +2,6 @@ package se.liu.ida.tdp024.account.logic.impl.facade;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import java.io.IOException;
 import java.util.List;
 import java.util.ServiceConfigurationError;
@@ -16,8 +15,8 @@ import se.liu.ida.tdp024.account.util.http.HTTPHelperImpl;
 
 public class AccountLogicFacadeImpl implements AccountLogicFacade {
     
-    private AccountEntityFacade accountEntityFacade;
-    private TransactionEntityFacade transactionEntityFacade;
+    private final AccountEntityFacade accountEntityFacade;
+    private final TransactionEntityFacade transactionEntityFacade;
     
     public AccountLogicFacadeImpl(AccountEntityFacade accountEntityFacade, TransactionEntityFacade transactionEntityFacade) {
         this.accountEntityFacade = accountEntityFacade;
@@ -28,12 +27,18 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
     public long create(String personName, String accountType, String bankName) {
         String personKey = getPersonKey(personName);  
         String bankKey = getBankKey(bankName); 
+        if (personKey == null || bankKey == null)
+            return -1;
+        if (!accountType.equals("CHECK") && !accountType.equals("SAVINGS"))
+            return -1;
         long id;
         try {
             id = accountEntityFacade.create(personKey, accountType, bankKey); 
         } catch(ServiceConfigurationError e) {
+            System.out.println("Error in logic facade");
             return -1;
         } catch(Exception e) {
+            System.out.println("Error in logic facade");
             return -1;
         }
         

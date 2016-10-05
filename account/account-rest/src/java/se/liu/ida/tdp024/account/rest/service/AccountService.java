@@ -32,10 +32,13 @@ public class AccountService {
             @QueryParam("bank") String bankName) {
         
         long id = accountLogicFacade.create(name, accountType, bankName);
+        System.out.println("************* ----------- id -> " + id);
         if(id != -1) {
-            return Response.ok().entity("OK").build();
+            return Response.ok().entity("OK" + "").build();
         } else {
-            return Response.ok().entity("FAILED").build();
+            return Response.ok().entity("FAILED" + "").build();
+            //return Response.status(Response.Status.BAD_REQUEST).build();
+            
         }
         //return Response.ok().entity(id + "").build();
         
