@@ -165,6 +165,8 @@ public class TransactionTest {
         {
             String checkJson = httpHelper.get(FinalConstants.ENDPOINT + "account/find/name", "name", "Jakob Pogulis");
             AccountDTO refreshedAccountDTO = jsonSerializer.fromJson(checkJson, AccountDTO[].class)[0];
+            System.out.println("£££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££");
+            System.out.println(refreshedAccountDTO.getId() + " " + refreshedAccountDTO.getHoldings());
             Assert.assertEquals(0, refreshedAccountDTO.getHoldings());
         }
 

@@ -15,9 +15,9 @@ public interface AccountEntityFacade {
     
     public String getType(long id);
     
-    public void withdraw(long id, long amount);
+    public Account withdraw(long id, long amount, Account account);
     
-    public void deposit(long id, long amount);
+    public Account deposit(long id, long amount, Account account);
     
     public long checkBalance(long id);
     
