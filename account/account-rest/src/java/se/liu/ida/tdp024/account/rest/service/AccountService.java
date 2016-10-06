@@ -96,7 +96,7 @@ public class AccountService {
             @QueryParam("id") long accountId,
             @QueryParam("amount") long amount) {
         
-        String status = transactionLogicFacade.addTransaction(accountId, amount, "debit");
+        String status = transactionLogicFacade.addTransaction(accountId, amount, "DEBIT");
         return Response.ok().entity(status + "").build();
         
     }
@@ -107,7 +107,7 @@ public class AccountService {
             @QueryParam("id") long accountId,
             @QueryParam("amount") long amount) {
         
-        String status = transactionLogicFacade.addTransaction(accountId, amount, "credit");
+        String status = transactionLogicFacade.addTransaction(accountId, amount, "CREDIT");
         return Response.ok().entity(status + "").build();
         
     }

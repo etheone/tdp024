@@ -71,10 +71,10 @@ public class AccountLogicFacadeTest {
     public void testFindAllTransactions() {
         System.out.println("testFindAllTransactions");
         long accountId = accountLogicFacade.create("Tommy Lindman", "CHECK", "SWEDBANK");
-        transactionLogicFacade.addTransaction(accountId, 100, "credit");
-        transactionLogicFacade.addTransaction(accountId, 33, "debit");
-        transactionLogicFacade.addTransaction(accountId, 31, "debit");
-        transactionLogicFacade.addTransaction(accountId, 2, "credit");
+        transactionLogicFacade.addTransaction(accountId, 100, "CREDIT");
+        transactionLogicFacade.addTransaction(accountId, 33, "DEBIT");
+        transactionLogicFacade.addTransaction(accountId, 31, "DEBIT");
+        transactionLogicFacade.addTransaction(accountId, 2, "CREDIT");
         
         String allTransactions = accountLogicFacade.findAllTransactions(accountId);
         

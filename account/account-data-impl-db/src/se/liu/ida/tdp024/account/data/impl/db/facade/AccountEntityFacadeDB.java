@@ -57,24 +57,24 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
         try {
             em.getTransaction().begin();
             
-            Account account = em.find(AccountDB.class, accountId);
+            Account account = em.find(AccountDB.class, accountId, LockModeType.PESSIMISTIC_WRITE);
             
             Transaction transaction = em.find(TransactionDB.class, transactionId);
-            transaction.setAccount(account);
+            //transaction.setAccount(account);
             
             //account.addTransactionToAccount(transaction);
             
             if(transaction.getStatus().equals("OK")) {
-                if (transaction.getType().equals("debit"))  {
-                    withdraw(accountId, transaction.getAmount());
+                if (transaction.getType().equals("DEBIT"))  {
+                    withdraw(accountId, transaction.getAmount(), account);
                 } else {
-                    deposit(accountId, transaction.getAmount());
+                    deposit(accountId, transaction.getAmount(), account);
                 }
             }
             
-            //em.merge(account);
-            em.merge(transaction);
             
+            //em.merge(transaction);
+            em.merge(account);
             em.getTransaction().commit();
         } catch (Exception e) {
             // Log stuff
@@ -93,7 +93,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
         EntityManager em = EMF.getEntityManager();
         
         try {
-            return em.find(AccountDB.class, id);
+            return em.find(AccountDB.class, id, LockModeType.PESSIMISTIC_READ);
         } catch(Exception e) {
             //logg stuff
             return null;
@@ -135,18 +135,18 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     }
 
     @Override
-    public void withdraw(long id, long amount) {
-        EntityManager em = EMF.getEntityManager();
-        try {
-            em.getTransaction().begin();
+    public Account withdraw(long id, long amount, Account account) {
+        //EntityManager em = EMF.getEntityManager();
+        //try {
+            //em.getTransaction().begin();
             
-            Account account = em.find(AccountDB.class, id, LockModeType.PESSIMISTIC_WRITE);
+            //Account account = em.find(AccountDB.class, id);
             account.setHoldings(account.getHoldings() - amount);
             
-            em.merge(account);
+            //em.merge(account);
             
-            em.getTransaction().commit();
-            
+            //em.getTransaction().commit();
+         /*   
         } catch(Exception e) {
             //logg stuff
         } finally {
@@ -155,7 +155,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             }
 
             em.close();
-        }
+        }*/
         /*
         try {
             Account account = find(id);
@@ -164,17 +164,19 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
         } catch(Exception e) {
             //logg stuff
         }*/
-  
+         return account;
     }
 
     @Override
-    public void deposit(long id, long amount) {
-        EntityManager em = EMF.getEntityManager();
+    public Account deposit(long id, long amount, Account account) {
+        
+        account.setHoldings(account.getHoldings() + amount);
+       /* EntityManager em = EMF.getEntityManager();
         try {
             em.getTransaction().begin();
             
             Account account = em.find(AccountDB.class, id, LockModeType.PESSIMISTIC_WRITE);
-            account.setHoldings(account.getHoldings() + amount);
+            
             
             em.merge(account);
             
@@ -188,7 +190,8 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             }
 
             em.close();
-        }
+        }*/
+        return account;
     }
 
     @Override

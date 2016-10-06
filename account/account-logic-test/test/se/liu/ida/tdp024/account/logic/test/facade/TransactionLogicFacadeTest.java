@@ -35,15 +35,15 @@ public class TransactionLogicFacadeTest {
     @Test
     public void testAddTransaction() {
         long accountId = accountLogicFacade.create("Tommy Lindman", "CHECK", "Bank of Sverige");
-        String status = transactionLogicFacade.addTransaction(accountId, 99, "credit");
-        String statusFailed = transactionLogicFacade.addTransaction(accountId, 100, "debit");
+        String status = transactionLogicFacade.addTransaction(accountId, 99, "CREDIT");
+        String statusFailed = transactionLogicFacade.addTransaction(accountId, 100, "DEBIT");
         System.out.println("************* --------->    " + status);
         Assert.assertTrue(status.equals("OK"));
         Assert.assertTrue(statusFailed.equals("FAILED"));
         
         long accountId2 = accountLogicFacade.create("Charles Xavier", "CHECK", "Jotenheim National Bank");
-        String status2 = transactionLogicFacade.addTransaction(accountId2, 100, "credit");
-        String status3 = transactionLogicFacade.addTransaction(accountId2, 100, "debit");
+        String status2 = transactionLogicFacade.addTransaction(accountId2, 100, "CREDIT");
+        String status3 = transactionLogicFacade.addTransaction(accountId2, 100, "DEBIT");
         System.out.println("************* --------->    " + status);
         Assert.assertTrue(status2.equals("OK"));
         Assert.assertTrue(status3.equals("OK"));

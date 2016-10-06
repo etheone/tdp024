@@ -42,7 +42,7 @@ public class TransactionLogicFacadeImpl implements TransactionLogicFacade {
             
             String status = "FAILED";
             
-            if (type == "credit") {
+            if (type.equals("CREDIT")) {
                 status = "OK";
             } else if((account.getHoldings() - amount) >= 0) {
                 status = "OK";
@@ -53,8 +53,8 @@ public class TransactionLogicFacadeImpl implements TransactionLogicFacade {
             
             try {
                 long transId = transactionEntityFacadeDB.create(type, amount, created.toString(), status, account);
-                //accountEntityFacadeDB.addTransaction(accountId, transId);
-                return "OK";
+                accountEntityFacadeDB.addTransaction(accountId, transId);
+                return status;
             } catch(Exception e) {
                 //trans was not creator or not added to account
                 

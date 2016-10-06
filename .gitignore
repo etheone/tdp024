@@ -7,3 +7,9 @@
 /account/account-data-impl-db/dist/
 /account/account-logic-api/dist/
 /account/account-logic-impl/dist/
+/account/account-util/build/
+/account/account-data-impl-db/build/
+/account/account-data-api/build/
+/account/account-logic-api/build/
+/account/account-logic-impl/build/
+/account/account-rest/build/
