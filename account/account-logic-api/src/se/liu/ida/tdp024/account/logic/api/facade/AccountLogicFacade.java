@@ -12,7 +12,7 @@ public interface AccountLogicFacade {
     
     public Account findByName(String name);
     
-    public List<Account> findAllAccounts(String name);
+    public String findAllAccounts(String name);
     
     public List<Transaction> findAllTransactions(long accountId);
 }
