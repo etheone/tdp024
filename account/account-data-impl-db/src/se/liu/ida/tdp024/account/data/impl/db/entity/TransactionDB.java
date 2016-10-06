@@ -63,13 +63,13 @@ public class TransactionDB implements Transaction {
     }
 
     @Override
-    public String getDate() {
+    public String getCreated() {
         return created;
     }
 
     @Override
-    public void setDate(String date) {
-        this.created = date;
+    public void setCreated(String created) {
+        this.created = created;
     }
 
     @Override
