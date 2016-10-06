@@ -2,3 +2,8 @@
 /account/account-data-test/build/
 /account/account-logic-test/build/
 /account/account-rest/dist/
+/account/account-data-api/dist/
+/account/account-util/dist/
+/account/account-data-impl-db/dist/
+/account/account-logic-api/dist/
+/account/account-logic-impl/dist/

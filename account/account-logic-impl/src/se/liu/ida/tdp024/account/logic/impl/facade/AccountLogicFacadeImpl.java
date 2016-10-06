@@ -61,7 +61,7 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         // Contact our services to get personKey
         HTTPHelper httphelper = new HTTPHelperImpl();
         String response = httphelper.get("http://localhost:8060/person/find.name","name", name);
-        System.out.println();
+        System.out.println("getPersonKey");
         System.out.println(response);
         //System.out.println(response.substring(response.indexOf("key")+4, response.indexOf("key")+10));
         System.out.println();
@@ -111,9 +111,12 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
     }
 
     @Override
-    public List<Transaction> findAllTransactions(long accountId) {
+    public String findAllTransactions(long accountId) {
         //return transactionEntityFacade.findAll(accountId);
-        return accountEntityFacade.findAllTransactions(accountId);
+        List<Transaction> allTransactions = accountEntityFacade.findAllTransactions(accountId);
+        AccountJsonSerializer jsonSerializer = new AccountJsonSerializerImpl();
+        return jsonSerializer.toJson(allTransactions);
+        //return accountEntityFacade.findAllTransactions(accountId);
     }
     
 }

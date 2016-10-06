@@ -38,7 +38,7 @@ public class AccountService {
         if(name == null || accountType == null || bankName == null) {
             return Response.ok().entity("FAILED" + "").build();
         }
-        
+        System.out.println("HEHEHEHEHEHEHEHHEHEHEH");
         
         long id = accountLogicFacade.create(name, accountType, bankName);
         System.out.println("************* ----------- id -> " + id);
@@ -93,7 +93,7 @@ public class AccountService {
     @GET
     @Path("debit")
     public Response debit(
-            @QueryParam("accountId") long accountId,
+            @QueryParam("id") long accountId,
             @QueryParam("amount") long amount) {
         
         String status = transactionLogicFacade.addTransaction(accountId, amount, "debit");
@@ -117,16 +117,18 @@ public class AccountService {
     public Response findTransactions(
             @QueryParam("id") long accountId) {
         
-        List<Transaction> allTransactions = accountLogicFacade.findAllTransactions(accountId);
+        String allTransactions = accountLogicFacade.findAllTransactions(accountId);
         //return Response.status(Response.Status.OK).entity(json).build();
         
 
-        
-        String json = jsonSerializer.toJson(allTransactions);
+        System.out.println("==========================================================");
+        System.out.println("==== In service ==========================================");
+        System.out.println(allTransactions);
+        //String json = jsonSerializer.toJson(allTransactions);
         
      
         
-        return Response.status(Response.Status.OK).entity(json + "").build();
+        return Response.status(Response.Status.OK).entity(allTransactions+ "").build();
         
     }
     

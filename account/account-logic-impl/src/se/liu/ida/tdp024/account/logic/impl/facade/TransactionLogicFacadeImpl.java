@@ -53,10 +53,11 @@ public class TransactionLogicFacadeImpl implements TransactionLogicFacade {
             
             try {
                 long transId = transactionEntityFacadeDB.create(type, amount, date.toString(), status, account);
-                accountEntityFacadeDB.addTransaction(accountId, transId);
+                //accountEntityFacadeDB.addTransaction(accountId, transId);
                 return "OK";
             } catch(Exception e) {
                 //trans was not creator or not added to account
+                
                 return e.getStackTrace().toString();
             }
             

@@ -28,7 +28,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             account.setBankKey(bankKey);
             account.setAccountType(accountType);
             account.setHoldings(0);
-            account.setTransactions(new ArrayList<Transaction>());
+            //account.setTransactions(new ArrayList<Transaction>());
             
             em.persist(account);
             em.getTransaction().commit();
@@ -62,7 +62,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             Transaction transaction = em.find(TransactionDB.class, transactionId);
             transaction.setAccount(account);
             
-            account.addTransactionToAccount(transaction);
+            //account.addTransactionToAccount(transaction);
             
             if(transaction.getStatus().equals("OK")) {
                 if (transaction.getType().equals("debit"))  {
@@ -72,7 +72,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
                 }
             }
             
-            em.merge(account);
+            //em.merge(account);
             em.merge(transaction);
             
             em.getTransaction().commit();
@@ -111,6 +111,10 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             query.setParameter("pk", personKey);
             return query.getResultList();
         } catch(Exception e) {
+            System.out.println("=======================**************************====================");
+            System.out.println("=======================**************************====================");
+            System.out.println("=======================**************************====================");
+            e.printStackTrace();
             //log
             return null;
         } finally {
@@ -203,27 +207,28 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     public List<Transaction> findAllTransactions(long accountId) {
         List a = new ArrayList<Transaction>();
         EntityManager em = EMF.getEntityManager();
+        
         try {
             em.getTransaction().begin();
-            
-            Account account = em.find(AccountDB.class, accountId, LockModeType.PESSIMISTIC_READ);
-            
-            
-            return account.getTransactions();
-            
-         
-            
+            Query query = em.createQuery("SELECT t from TransactionDB t WHERE t.account.id = :id");
+            query.setParameter("id", accountId);
+            return query.getResultList();
         } catch(Exception e) {
-            //logg stuff
-            return a;
+            System.out.println("=======================**************************====================");
+            System.out.println("=======================**************************====================");
+            System.out.println("=======================**************************====================");
+            e.printStackTrace();
+            //log
+            return null;
         } finally {
             if (em.getTransaction().isActive()) {
                 em.getTransaction().rollback();
             }
-
+            
             em.close();
         }
         
     }
     
 }
+

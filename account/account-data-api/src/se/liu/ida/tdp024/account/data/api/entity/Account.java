@@ -25,10 +25,10 @@ public interface Account extends Serializable {
     
     public void setHoldings(long amount);
     
-    public List<Transaction> getTransactions();
+   /* public List<Transaction> getTransactions();
     
     public void setTransactions(List<Transaction> transactions);
     
-    public void addTransactionToAccount(Transaction t);
+    public void addTransactionToAccount(Transaction t);*/
     
 }

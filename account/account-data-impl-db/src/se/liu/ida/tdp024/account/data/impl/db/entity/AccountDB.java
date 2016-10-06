@@ -73,7 +73,7 @@ public class AccountDB implements Account {
         this.holdings = amount;
     }
     
-    @Override
+   /* @Override
     public List<Transaction> getTransactions()
     {
         return this.transactions;
@@ -88,5 +88,5 @@ public class AccountDB implements Account {
     @Override
     public void addTransactionToAccount(Transaction t) {
         this.transactions.add(t);
-    }
+    }*/
 }

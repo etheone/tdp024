@@ -14,5 +14,5 @@ public interface AccountLogicFacade {
     
     public String findAllAccounts(String name);
     
-    public List<Transaction> findAllTransactions(long accountId);
+    public String findAllTransactions(long accountId);
 }
