@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" failures="1" hostname="li2-10" name="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" skipped="0" tests="3" time="49.63" timestamp="2016-10-06T11:16:39">
+<testsuite errors="0" failures="2" hostname="parlomba1" name="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" skipped="0" tests="3" time="40.991" timestamp="2016-10-06T12:09:58">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
-    <property name="netbeans.autoupdate.country" value="SE" />
+    <property name="netbeans.autoupdate.country" value="GB" />
     <property name="ant.file.type.account-xfinal-test-impl" value="file" />
     <property name="javac.test.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:build/classes:/home/TDP024/netbeans-8.0.1/platform/modules/ext/junit-4.10.jar" />
     <property name="libs.jsf20.maven-pom" value="" />
@@ -12,7 +12,7 @@
     <property name="ant.core.lib" value="/home/TDP024/netbeans-8.0.1/extide/ant/lib/ant.jar" />
     <property name="javadoc.windowtitle" value="" />
     <property name="libs.jsp-compilation.javadoc" value="" />
-    <property name="user.dir" value="/home/emini901/tdp024/account/account-xfinal-test" />
+    <property name="user.dir" value="/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test" />
     <property name="libs.javaee-api-7.0.src" value="" />
     <property name="java.vm.version" value="24.75-b04" />
     <property name="libs.MySQLDriver.classpath" value="/home/TDP024/netbeans-8.0.1/ide/modules/ext/mysql-connector-java-5.1.23-bin.jar" />
@@ -49,13 +49,13 @@
     <property name="libs.jaxb.maven-pom" value="" />
     <property name="os.arch" value="amd64" />
     <property name="libs.eclipselink.src" value="" />
-    <property name="user.name" value="emini901" />
+    <property name="user.name" value="tomli962" />
     <property name="libs.jsf12.javadoc" value="/home/TDP024/netbeans-8.0.1/enterprise/docs/javaee-doc-api.jar" />
     <property name="libs.Comet-GlassFish-v3.javadoc" value="" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/emini901/tdp024/account/account-xfinal-test/build/test/results/TEST-se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.xml crashfile=/home/emini901/tdp024/account/account-xfinal-test/build/junitvmwatcher8919306581642694530.properties propsfile=/home/emini901/tdp024/account/account-xfinal-test/build/junit4633595917901930461.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test/build/test/results/TEST-se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.xml crashfile=/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test/build/junitvmwatcher269006009068173218.properties propsfile=/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test/build/junit8106598889945552495.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -64,7 +64,7 @@
     <property name="libs.jaxws21.javadoc" value="/home/TDP024/netbeans-8.0.1/java/docs/jaxws-api-doc.zip" />
     <property name="libs.spring-webmvc4.0.javadoc" value="" />
     <property name="includes" value="**" />
-    <property name="user.country" value="SE" />
+    <property name="user.country" value="GB" />
     <property name="javadoc.encoding" value="UTF-8" />
     <property name="javac.classpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar" />
     <property name="libs.jsp-compilation-syscp.src" value="" />
@@ -87,7 +87,7 @@
     <property name="libs.jaxws21.src" value="" />
     <property name="application.title" value="account-xfinal-test" />
     <property name="do.archive" value="true" />
-    <property name="netbeans.autoupdate.language" value="sv" />
+    <property name="netbeans.autoupdate.language" value="en" />
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="libs.javaee-api-6.0.javadoc" value="/home/TDP024/netbeans-8.0.1/enterprise/docs/javaee-doc-api.jar" />
     <property name="sun.font.fontmanager" value="sun.awt.X11FontManager" />
@@ -96,7 +96,7 @@
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="/" />
     <property name="libs.Java-EE-GlassFish-v3-Prelude.maven-pom" value="" />
-    <property name="javac.includesfile.binary" value="/home/emini901/tdp024/account/account-xfinal-test/null1760332007" />
+    <property name="javac.includesfile.binary" value="/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test/null1496517915" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="true" />
     <property name="javac.test.processorpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:build/classes:/home/TDP024/netbeans-8.0.1/platform/modules/ext/junit-4.10.jar" />
@@ -111,7 +111,7 @@
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="/home/TDP024/netbeans-8.0.1/ide/docs/jaxb-api-doc.zip" />
     <property name="libs.struts.classpath" value="/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/antlr-2.7.2.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/bsf-2.3.0.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/commons-beanutils-1.8.0.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/commons-chain-1.2.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/commons-digester-1.8.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/commons-fileupload-1.1.1.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/commons-io-1.1.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/commons-logging-1.0.4.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/commons-validator-1.3.1.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/jstl-1.0.2.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/oro-2.0.8.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/standard-1.0.6.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/struts-core-1.3.10.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/struts-el-1.3.10.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/struts-extras-1.3.10.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/struts-faces-1.3.10.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/struts-mailreader-dao-1.3.10.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/struts-scripting-1.3.10.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/struts-taglib-1.3.10.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/struts/struts-tiles-1.3.10.jar" />
-    <property name="javac.includes.binary" value="/home/emini901/tdp024/account/account-xfinal-test/build/test/classes/se/liu/ida/tdp024/account/xfinal/test/account/TransactionTest.class" />
+    <property name="javac.includes.binary" value="/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test/build/test/classes/se/liu/ida/tdp024/account/xfinal/test/account/TransactionTest.class" />
     <property name="ant.home" value="/home/TDP024/netbeans-8.0.1/extide/ant" />
     <property name="libs.junit_4.src" value="/home/TDP024/netbeans-8.0.1/java/docs/junit-4.10-sources.jar" />
     <property name="libs.testng.classpath" value="/home/TDP024/netbeans-8.0.1/platform/modules/ext/testng-6.8.1-dist.jar" />
@@ -126,7 +126,7 @@
     <property name="libs.PostgreSQLDriver.src" value="" />
     <property name="file.reference.junit-4.10.jar" value="../lib/junit-4.10.jar" />
     <property name="sun.arch.data.model" value="64" />
-    <property name="basedir" value="/home/emini901/tdp024/account/account-xfinal-test" />
+    <property name="basedir" value="/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test" />
     <property name="libs.jpa20-persistence.maven-pom" value="" />
     <property name="jar.compress" value="false" />
     <property name="libs.javaee-web-api-7.0.classpath" value="/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/javaee-web-api-7.0.jar" />
@@ -137,7 +137,7 @@
     <property name="libs.jaxws21.classpath" value="/home/TDP024/netbeans-8.0.1/ide/modules/ext/jaxb/jaxb-impl.jar:/home/TDP024/netbeans-8.0.1/ide/modules/ext/jaxb/jaxb-xjc.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/FastInfoset.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/gmbal-api-only.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/ha-api.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/javax.mail_1.4.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/jaxws-rt.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/jaxws-tools.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/management-api.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/mimepull.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/policy.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/saaj-impl.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/stax-ex.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/stax2-api.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/streambuffer.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/woodstox-core-asl.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/api/jaxws-api.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/api/jsr181-api.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/api/javax.annotation.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/jaxws22/api/saaj-api.jar:/home/TDP024/netbeans-8.0.1/ide/modules/ext/jaxb/activation.jar:/home/TDP024/netbeans-8.0.1/ide/modules/ext/jaxb/api/jaxb-api.jar:/home/TDP024/netbeans-8.0.1/ide/modules/ext/jaxb/api/jsr173_1.0_api.jar" />
     <property name="libs.struts.src" value="" />
     <property name="apple.awt.graphics.UseQuartz" value="true" />
-    <property name="user.language" value="sv" />
+    <property name="user.language" value="en" />
     <property name="testng.mode" value="testng" />
     <property name="libs.JAXB-ENDORSED.maven-pom" value="" />
     <property name="libs.eclipselink.maven-pom" value="" />
@@ -151,7 +151,7 @@
     <property name="libs.swing-layout.javadoc" value="/home/TDP024/netbeans-8.0.1/platform/docs/swing-layout-1.0.4-doc.zip" />
     <property name="sun.java2d.dpiaware" value="true" />
     <property name="libs.hibernate4-persistence.maven-pom" value="" />
-    <property name="https.nonProxyHosts" value="localhost|127.0.0.1|li2-10" />
+    <property name="https.nonProxyHosts" value="localhost|127.0.0.1|parlomba1" />
     <property name="libs.PostgreSQLDriver.maven-pom" value="" />
     <property name="java.class.version" value="51.0" />
     <property name="libs.JAVADB_DRIVER_LABEL.classpath" value="/sw/jdk7/db/lib/derby.jar:/sw/jdk7/db/lib/derbyclient.jar:/sw/jdk7/db/lib/derbynet.jar" />
@@ -159,7 +159,7 @@
     <property name="libs.javaee-endorsed-api-6.0.src" value="" />
     <property name="libs.eclipselink.javadoc" value="/home/TDP024/netbeans-8.0.1/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="libs.jsp-compilation.maven-pom" value="" />
-    <property name="user.properties.file" value="/home/emini901/.netbeans/8.0.1/build.properties" />
+    <property name="user.properties.file" value="/home/tomli962/.netbeans/8.0.1/build.properties" />
     <property name="runtime.encoding" value="UTF-8" />
     <property name="libs.javac-api.maven-pom" value="" />
     <property name="file.encoding.pkg" value="sun.io" />
@@ -169,7 +169,7 @@
     <property name="libs.spring-webmvc4.0.maven-pom" value="" />
     <property name="libs.spring-framework300.src" value="" />
     <property name="libs.jstl.src" value="" />
-    <property name="empty.dir" value="/home/emini901/tdp024/account/account-xfinal-test/build/empty" />
+    <property name="empty.dir" value="/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test/build/empty" />
     <property name="version-output" value="java version &quot;1.7" />
     <property name="test.binarytestincludes" value="" />
     <property name="libs.hibernate4-persistencemodelgen.src" value="" />
@@ -187,7 +187,7 @@
     <property name="libs.restlib.classpath" value="/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/asm-all-repackaged-2.2.0-b21.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/cglib-2.2.0-b21.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/guava-14.0.1.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/hk2-api-2.2.0-b21.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/hk2-locator-2.2.0-b21.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/hk2-utils-2.2.0-b21.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/javax.annotation-api-1.2.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/javax.inject-2.2.0-b21.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/javax.servlet-api-3.0.1.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/jaxb-api-2.2.7.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/jersey-entity-filtering-2.5.1.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/jersey-media-moxy-2.5.1.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/org.osgi.core-4.2.0.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/osgi-resource-locator-1.0.1.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/persistence-api-1.0.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/validation-api-1.1.0.Final.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/jersey-client.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/jersey-common.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/jersey-container-servlet.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/jersey-container-servlet-core.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/jersey-server.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/eclipselink/eclipselink.jar" />
     <property name="libs.MySQLDriver.maven-pom" value="" />
     <property name="libs.hibernate4-persistence.javadoc" value="/home/TDP024/netbeans-8.0.1/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
-    <property name="http.nonProxyHosts" value="localhost|127.0.0.1|li2-10" />
+    <property name="http.nonProxyHosts" value="localhost|127.0.0.1|parlomba1" />
     <property name="libs.junit_4.javadoc" value="/home/TDP024/netbeans-8.0.1/java/docs/junit-4.10-javadoc.jar" />
     <property name="libs.EclipseLink-GlassFish-v3.maven-pom" value="" />
     <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
@@ -209,8 +209,8 @@
     <property name="libs.jsp-compiler.classpath" value="/home/TDP024/netbeans-8.0.1/enterprise/ant/extra/jspcompile.jar" />
     <property name="javac.processorpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar" />
     <property name="javac.compilerargs" value="" />
-    <property name="ant.file" value="/home/emini901/tdp024/account/account-xfinal-test/build.xml" />
-    <property name="ant.file.account-xfinal-test" value="/home/emini901/tdp024/account/account-xfinal-test/build.xml" />
+    <property name="ant.file" value="/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test/build.xml" />
+    <property name="ant.file.account-xfinal-test" value="/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test/build.xml" />
     <property name="libs.beans-binding.maven-pom" value="" />
     <property name="libs.hibernate4-support.javadoc" value="/home/TDP024/netbeans-8.0.1/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="libs.jsf12.classpath" value="/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jsf-1_2/commons-beanutils.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jsf-1_2/commons-collections.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jsf-1_2/commons-digester.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jsf-1_2/commons-logging.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jsf-1_2/jsf-api.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jsf-1_2/jsf-impl.jar" />
@@ -222,7 +222,7 @@
     <property name="libs.swing-layout.src" value="/home/TDP024/netbeans-8.0.1/platform/docs/swing-layout-1.0.4-src.zip" />
     <property name="org.openide.major.version" value="IDE/1" />
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
-    <property name="netbeans.user" value="/home/emini901/.netbeans/8.0.1" />
+    <property name="netbeans.user" value="/home/tomli962/.netbeans/8.0.1" />
     <property name="javadoc.additionalparam" value="" />
     <property name="java.io.tmpdir" value="/tmp" />
     <property name="java.vendor.url" value="http://java.oracle.com/" />
@@ -243,14 +243,14 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="file.reference.jackson-core-2.2.2.jar" value="../lib/jackson-core-2.2.2.jar" />
     <property name="ant.project.name" value="account-xfinal-test" />
-    <property name="netbeans.hash.code" value="unique=NB_EXTIDE_GFMOD_JAVA_WEBCOMMON_WEBEE0fa55c8fa-2ea9-4df5-827f-f4e89052f3c6_b0878753-39a8-4059-ae94-8c2ca707e979" />
-    <property name="netbeans.default_userdir_root" value="/home/emini901/.netbeans" />
+    <property name="netbeans.hash.code" value="unique=NB_EXTIDE_GFMOD_JAVA_WEBCOMMON_WEBEE01fb846ab-f4b1-4e9d-919a-0f22a2714fdd_752c3971-d032-4e2b-b7fe-8a37acaa8fad" />
+    <property name="netbeans.default_userdir_root" value="/home/tomli962/.netbeans" />
     <property name="libs.jsp-compilation-syscp.maven-pom" value="" />
     <property name="sun.cpu.isalist" value="" />
     <property name="libs.spring-framework400.javadoc" value="" />
     <property name="libs.CopyLibs.javadoc" value="" />
     <property name="org.openide.specification.version" value="6.2" />
-    <property name="user.home" value="/home/emini901" />
+    <property name="user.home" value="/home/tomli962" />
     <property name="annotation.processing.processors.list" value="" />
     <property name="libs.primefaces.maven-pom" value="" />
     <property name="debug-args-line" value="-Xdebug" />
@@ -282,7 +282,7 @@
     <property name="annotation.processing.processor.options" value="" />
     <property name="libs.testng.maven-pom" value="" />
     <property name="libs.jaxb.src" value="" />
-    <property name="work.dir" value="/home/emini901/tdp024/account/account-xfinal-test" />
+    <property name="work.dir" value="/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test" />
     <property name="libs.jaxb.classpath" value="/home/TDP024/netbeans-8.0.1/ide/modules/ext/jaxb/jaxb-impl.jar:/home/TDP024/netbeans-8.0.1/ide/modules/ext/jaxb/jaxb-xjc.jar:/home/TDP024/netbeans-8.0.1/ide/modules/ext/jaxb/jaxb1-impl.jar:/home/TDP024/netbeans-8.0.1/ide/modules/ext/jaxb/activation.jar:/home/TDP024/netbeans-8.0.1/ide/modules/ext/jaxb/api/jaxb-api.jar:/home/TDP024/netbeans-8.0.1/ide/modules/ext/jaxb/api/jsr173_1.0_api.jar" />
     <property name="do.depend" value="false" />
     <property name="dist.javadoc.dir" value="dist/javadoc" />
@@ -300,7 +300,7 @@
     <property name="junit.forkmode" value="perTest" />
     <property name="sun.boot.class.path" value="/sw/jdk7/jre/lib/resources.jar:/sw/jdk7/jre/lib/rt.jar:/sw/jdk7/jre/lib/sunrsasign.jar:/sw/jdk7/jre/lib/jsse.jar:/sw/jdk7/jre/lib/jce.jar:/sw/jdk7/jre/lib/charsets.jar:/sw/jdk7/jre/lib/jfr.jar:/sw/jdk7/jre/classes" />
     <property name="javac.target" value="1.6" />
-    <property name="built-jar.properties" value="/home/emini901/tdp024/account/account-xfinal-test/build/built-jar.properties" />
+    <property name="built-jar.properties" value="/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test/build/built-jar.properties" />
     <property name="build.test.classes.dir" value="build/test/classes" />
     <property name="libs.jpa2-persistence.src" value="" />
     <property name="annotation.processing.enabled" value="true" />
@@ -330,7 +330,7 @@
     <property name="libs.junit_4.classpath" value="/home/TDP024/netbeans-8.0.1/platform/modules/ext/junit-4.10.jar" />
     <property name="user.timezone" value="" />
     <property name="nb.junit.single" value="false" />
-    <property name="ant.file.account-xfinal-test-impl" value="/home/emini901/tdp024/account/account-xfinal-test/nbproject/build-impl.xml" />
+    <property name="ant.file.account-xfinal-test-impl" value="/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test/nbproject/build-impl.xml" />
     <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
     <property name="netbeans.dirs" value="/home/TDP024/netbeans-8.0.1/nb:/home/TDP024/netbeans-8.0.1/ergonomics:/home/TDP024/netbeans-8.0.1/ide:/home/TDP024/netbeans-8.0.1/extide:/home/TDP024/netbeans-8.0.1/java:/home/TDP024/netbeans-8.0.1/apisupport:/home/TDP024/netbeans-8.0.1/webcommon:/home/TDP024/netbeans-8.0.1/websvccommon:/home/TDP024/netbeans-8.0.1/enterprise:/home/TDP024/netbeans-8.0.1/mobility:/home/TDP024/netbeans-8.0.1/profiler:/home/TDP024/netbeans-8.0.1/python:/home/TDP024/netbeans-8.0.1/php:/home/TDP024/netbeans-8.0.1/identity:/home/TDP024/netbeans-8.0.1/harness:/home/TDP024/netbeans-8.0.1/cnd:/home/TDP024/netbeans-8.0.1/dlight:/home/TDP024/netbeans-8.0.1/groovy:/home/TDP024/netbeans-8.0.1/extra:/home/TDP024/netbeans-8.0.1/javacard:/home/TDP024/netbeans-8.0.1/javafx:" />
@@ -345,7 +345,7 @@
     <property name="libs.restlib.maven-pom" value="" />
     <property name="libs.jpa2-persistence.javadoc" value="/home/TDP024/netbeans-8.0.1/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
     <property name="apple.laf.useScreenMenuBar" value="true" />
-    <property name="java.class.path" value="/home/emini901/tdp024/account/account-util/dist/account-util.jar:/home/emini901/tdp024/account/lib/jackson-annotations-2.2.2.jar:/home/emini901/tdp024/account/lib/jackson-core-2.2.2.jar:/home/emini901/tdp024/account/lib/jackson-databind-2.2.1.jar:/home/emini901/tdp024/account/lib/junit-4.10.jar:/home/emini901/tdp024/account/account-xfinal-test/build/classes:/home/TDP024/netbeans-8.0.1/platform/modules/ext/junit-4.10.jar:/home/emini901/tdp024/account/account-xfinal-test/build/test/classes:/home/TDP024/netbeans-8.0.1/extide/ant/lib/ant-launcher.jar:/home/TDP024/netbeans-8.0.1/extide/ant/lib/ant.jar:/home/TDP024/netbeans-8.0.1/extide/ant/lib/ant-junit.jar:/home/TDP024/netbeans-8.0.1/extide/ant/lib/ant-junit4.jar" />
+    <property name="java.class.path" value="/home/tomli962/kurser/tdp024/tdp024/account/account-util/dist/account-util.jar:/home/tomli962/kurser/tdp024/tdp024/account/lib/jackson-annotations-2.2.2.jar:/home/tomli962/kurser/tdp024/tdp024/account/lib/jackson-core-2.2.2.jar:/home/tomli962/kurser/tdp024/tdp024/account/lib/jackson-databind-2.2.1.jar:/home/tomli962/kurser/tdp024/tdp024/account/lib/junit-4.10.jar:/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test/build/classes:/home/TDP024/netbeans-8.0.1/platform/modules/ext/junit-4.10.jar:/home/tomli962/kurser/tdp024/tdp024/account/account-xfinal-test/build/test/classes:/home/TDP024/netbeans-8.0.1/extide/ant/lib/ant-launcher.jar:/home/TDP024/netbeans-8.0.1/extide/ant/lib/ant.jar:/home/TDP024/netbeans-8.0.1/extide/ant/lib/ant-junit.jar:/home/TDP024/netbeans-8.0.1/extide/ant/lib/ant-junit4.jar" />
     <property name="libs.absolutelayout.src" value="" />
     <property name="libs.jpa20-persistence.classpath" value="/home/TDP024/netbeans-8.0.1/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar" />
     <property name="os.version" value="4.2.0-42-generic" />
@@ -391,56 +391,21 @@
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="/home/TDP024/netbeans-8.0.1/enterprise/docs/javaee-doc-api.jar" />
   </properties>
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testDebitConcurrency" time="26.996" />
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testFind" time="0.101">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.testFind(TransactionTest.java:58)
-</error>
-  </testcase>
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testCreditConcurrency" time="22.467">
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testCreditConcurrency" time="20.535">
     <failure message="expected:&lt;10000&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;10000&gt; but was:&lt;0&gt;
 	at se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.testCreditConcurrency(TransactionTest.java:226)
 </failure>
   </testcase>
-  <system-out><![CDATA[[{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}]*****************
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testFind" time="0.126">
+    <failure message="expected:&lt;[OK]&gt; but was:&lt;[FAILED]&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;[OK]&gt; but was:&lt;[FAILED]&gt;
+	at se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.testFind(TransactionTest.java:76)
+</failure>
+  </testcase>
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testDebitConcurrency" time="20.262" />
+  <system-out><![CDATA[[{"id":1,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0},{"id":2,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0},{"id":3,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"CHECK","holdings":0},{"id":46,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"CHECK","holdings":0},{"id":47,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0},{"id":48,"personKey":"\"a91wadaw2as\"","bankKey":"\"91ad21s5ak\"","accountType":"CHECK","holdings":0},{"id":49,"personKey":"\"a91wadaw2as\"","bankKey":"\"91ad21s5ak\"","accountType":"SAVINGS","holdings":0},{"id":50,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad016ASDF727ak\"","accountType":"CHECK","holdings":0},{"id":51,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad016ASDF727ak\"","accountType":"SAVINGS","holdings":0},{"id":52,"personKey":"\"a91wadaw2as\"","bankKey":"\"32141016727ak\"","accountType":"CHECK","holdings":0},{"id":53,"personKey":"\"a91wadaw2as\"","bankKey":"\"32141016727ak\"","accountType":"SAVINGS","holdings":0},{"id":54,"personKey":"\"a91wadaw2as\"","bankKey":"\"912asd291k\"","accountType":"CHECK","holdings":0},{"id":55,"personKey":"\"a91wadaw2as\"","bankKey":"\"912asd291k\"","accountType":"SAVINGS","holdings":0},{"id":56,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SAD9217ak\"","accountType":"CHECK","holdings":0},{"id":57,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SAD9217ak\"","accountType":"SAVINGS","holdings":0},{"id":58,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad016727ak\"","accountType":"CHECK","holdings":0},{"id":59,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad016727ak\"","accountType":"SAVINGS","holdings":0},{"id":60,"personKey":"\"a91wadaw2as\"","bankKey":"\"291as1291k\"","accountType":"CHECK","holdings":0},{"id":61,"personKey":"\"a91wadaw2as\"","bankKey":"\"291as1291k\"","accountType":"SAVINGS","holdings":0},{"id":62,"personKey":"\"a91wadaw2as\"","bankKey":"\"a15d016727ak\"","accountType":"CHECK","holdings":0},{"id":63,"personKey":"\"a91wadaw2as\"","bankKey":"\"a15d016727ak\"","accountType":"SAVINGS","holdings":0},{"id":100,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0},{"id":101,"personKey":"\"a91wadaw2as\"","bankKey":"\"32141016727ak\"","accountType":"SAVINGS","holdings":0},{"id":102,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad016ASDF727ak\"","accountType":"CHECK","holdings":0},{"id":1104,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}]*****************
 ********************JSON****************
-[{"id":1004,"type":"credit","amount":200,"status":"OK","account":{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0},"date":"Thu Oct 06 13:17:06 CEST 2016"},{"id":1005,"type":"debit","amount":50,"status":"FAILED","account":{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0},"date":"Thu Oct 06 13:17:06 CEST 2016"},{"id":1006,"type":"credit","amount":25,"status":"OK","account":{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0},"date":"Thu Oct 06 13:17:06 CEST 2016"},{"id":1007,"type":"debit","amount":100,"status":"FAILED","account":{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0},"date":"Thu Oct 06 13:17:06 CEST 2016"},{"id":1008,"type":"debit","amount":75,"status":"FAILED","account":{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0},"date":"Thu Oct 06 13:17:06 CEST 2016"},{"id":1009,"type":"debit","amount":10,"status":"FAILED","account":{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0},"date":"Thu Oct 06 13:17:06 CEST 2016"}]
-null
+[{"id":1105,"type":"credit","amount":200,"created":"Thu Oct 06 14:10:19 CEST 2016","status":"OK","account":{"id":1,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":1106,"type":"debit","amount":50,"created":"Thu Oct 06 14:10:19 CEST 2016","status":"FAILED","account":{"id":1,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":1107,"type":"credit","amount":25,"created":"Thu Oct 06 14:10:19 CEST 2016","status":"OK","account":{"id":1,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":1108,"type":"debit","amount":100,"created":"Thu Oct 06 14:10:19 CEST 2016","status":"FAILED","account":{"id":1,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":1109,"type":"debit","amount":75,"created":"Thu Oct 06 14:10:19 CEST 2016","status":"FAILED","account":{"id":1,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":1110,"type":"debit","amount":10,"created":"Thu Oct 06 14:10:19 CEST 2016","status":"FAILED","account":{"id":1,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}}]
+[Lse.liu.ida.tdp024.account.xfinal.test.util.TransactionDTO;@6be26796
 ]]></system-out>
-  <system-err><![CDATA[com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "date" (class se.liu.ida.tdp024.account.xfinal.test.util.TransactionDTO), not marked as ignorable (6 known properties: , "status", "amount", "created", "type", "id", "account"])
- at [Source: java.io.StringReader@1d6caa31; line: 1, column: 182] (through reference chain: se.liu.ida.tdp024.account.xfinal.test.util.TransactionDTO["date"])
-	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:79)
-	at com.fasterxml.jackson.databind.DeserializationContext.reportUnknownProperty(DeserializationContext.java:555)
-	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:708)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1159)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:315)
-	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:121)
-	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:151)
-	at com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer.deserialize(ObjectArrayDeserializer.java:18)
-	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2888)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2034)
-	at se.liu.ida.tdp024.account.util.json.AccountJsonSerializerImpl.fromJson(AccountJsonSerializerImpl.java:27)
-	at se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.testFind(TransactionTest.java:55)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
-	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:39)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:532)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1179)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1030)
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>

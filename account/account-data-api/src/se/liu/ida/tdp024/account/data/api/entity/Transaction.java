@@ -23,9 +23,9 @@ public interface Transaction {
     
     public void setAmount(long amount);
     
-    public String getDate();
+    public String getCreated();
     
-    public void setDate(String date);
+    public void setCreated(String created);
     
     public String getStatus();
     

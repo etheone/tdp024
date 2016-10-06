@@ -34,7 +34,7 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade{
             Transaction transaction = new TransactionDB();
             transaction.setType(type);
             transaction.setAmount(amount);
-            transaction.setDate(created);
+            transaction.setCreated(created);
             transaction.setStatus(status);
             transaction.setAccount(account);
             

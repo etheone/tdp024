@@ -49,10 +49,10 @@ public class TransactionLogicFacadeImpl implements TransactionLogicFacade {
             }
             
             TransactionEntityFacade transactionEntityFacadeDB = new TransactionEntityFacadeDB();
-            Date date = new Date();
+            Date created = new Date();
             
             try {
-                long transId = transactionEntityFacadeDB.create(type, amount, date.toString(), status, account);
+                long transId = transactionEntityFacadeDB.create(type, amount, created.toString(), status, account);
                 //accountEntityFacadeDB.addTransaction(accountId, transId);
                 return "OK";
             } catch(Exception e) {

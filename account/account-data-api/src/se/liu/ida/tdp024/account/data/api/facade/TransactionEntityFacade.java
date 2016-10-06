@@ -10,7 +10,7 @@ import se.liu.ida.tdp024.account.data.api.entity.Transaction;
  */
 public interface TransactionEntityFacade {
     public long create(String type, long amount,
-            String date, String status, Account account);
+            String created, String status, Account account);
     
     public Transaction find(long id);
     
