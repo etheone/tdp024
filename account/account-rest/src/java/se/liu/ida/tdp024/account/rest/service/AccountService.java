@@ -59,33 +59,34 @@ public class AccountService {
     public Response find(
             @QueryParam("name") String name) {
         
-        List<Account> allAccounts = accountLogicFacade.findAllAccounts(name);
+        //List<Account> allAccounts = accountLogicFacade.findAllAccounts(name);
+        String allAccounts = accountLogicFacade.findAllAccounts(name);
         
         System.out.println("###########################");
         System.out.println("### List #####");
         System.out.println(allAccounts);
         
-        String stringAccounts = "[";
+        /*String stringAccounts = "[";
         //List<Account> accounts = new ArrayList<Account>();
         for(Account a : allAccounts) {
             stringAccounts += a;
-        }
+        }*/
         
-        stringAccounts += "]";
+        //stringAccounts += "]";
         String json;
         
         
-        json = jsonSerializer.toJson(stringAccounts);
+        //json = jsonSerializer.toJson(stringAccounts);
         
         System.out.println("###########################");
-        System.out.println("### JSON in service #####");
-        //System.out.println(json);
+        System.out.println("### Result of find in service #####");
+        System.out.println(allAccounts);
         System.out.println("###############");
          
         //GenericEntity entity;
         //entity = new GenericEntity<List<Account>>(allAccounts){};
         
-        return Response.ok().entity(json + "").build();
+        return Response.ok().entity(allAccounts + "").build();
         
     }
     

@@ -66,6 +66,25 @@ public class AccountServiceTest {
     }
     
     @Test
+    public void testFindPerson()
+    {
+        AccountService accountService = new AccountService();
+        
+        String name = "Marcus Bendtsen";
+        String bank = "SWEDBANK";
+        String accountType = "SAVINGS";
+        Response response = accountService.create(name, accountType, bank);
+        //System.out.println("The response after bad create:");
+        //System.out.println(response.getEntity().toString());
+        
+        Response res = accountService.find(name);
+        System.out.println("=====================================================");
+        System.out.println("What we get back after find:");
+        System.out.println(res.getEntity().toString());
+    }
+    
+    /*
+    @Test
     public void testFindAllTransaction() {
         
         AccountService accountService = new AccountService();
@@ -149,10 +168,10 @@ public class AccountServiceTest {
         Assert.assertNotNull(transactions.get(2).getCreated());
         Assert.assertNotNull(transactions.get(3).getCreated());
         Assert.assertNotNull(transactions.get(4).getCreated());
-        Assert.assertNotNull(transactions.get(5).getCreated());*/
+        Assert.assertNotNull(transactions.get(5).getCreated());
         
         
     }
-    
+    */
     
 }

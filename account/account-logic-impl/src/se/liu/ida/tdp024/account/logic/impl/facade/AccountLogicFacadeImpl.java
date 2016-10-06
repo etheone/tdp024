@@ -12,6 +12,8 @@ import se.liu.ida.tdp024.account.data.api.facade.TransactionEntityFacade;
 import se.liu.ida.tdp024.account.logic.api.facade.AccountLogicFacade;
 import se.liu.ida.tdp024.account.util.http.HTTPHelper;
 import se.liu.ida.tdp024.account.util.http.HTTPHelperImpl;
+import se.liu.ida.tdp024.account.util.json.AccountJsonSerializer;
+import se.liu.ida.tdp024.account.util.json.AccountJsonSerializerImpl;
 
 public class AccountLogicFacadeImpl implements AccountLogicFacade {
     
@@ -102,9 +104,10 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
     } 
 
     @Override
-    public List<Account> findAllAccounts(String name) {
+    public String findAllAccounts(String name) {
         List<Account> allAccounts = accountEntityFacade.findAll(getPersonKey(name));
-        return allAccounts;
+        AccountJsonSerializer jsonSerializer = new AccountJsonSerializerImpl();
+        return jsonSerializer.toJson(allAccounts);
     }
 
     @Override

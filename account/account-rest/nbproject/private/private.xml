@@ -3,12 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/emini901/tdp024/account/account-rest/test/tdp024/account/rest/service/AccountServiceTest.java</file>
-            <file>file:/home/emini901/tdp024/account/account-rest/web/WEB-INF/dummy</file>
-            <file>file:/home/emini901/tdp024/account/account-rest/src/conf/MANIFEST.MF</file>
-            <file>file:/home/emini901/tdp024/account/account-rest/src/java/se/liu/ida/tdp024/account/rest/service/TransactionService.java</file>
-            <file>file:/home/emini901/tdp024/account/account-rest/src/java/se/liu/ida/tdp024/account/rest/util/ApplicationConfiguration.java</file>
-            <file>file:/home/emini901/tdp024/account/account-rest/src/java/se/liu/ida/tdp024/account/rest/service/AccountService.java</file>
+            <file>file:/home/tomli962/kurser/tdp024/tdp024/account/account-rest/test/tdp024/account/rest/service/AccountServiceTest.java</file>
+            <file>file:/home/tomli962/kurser/tdp024/tdp024/account/account-rest/src/java/se/liu/ida/tdp024/account/rest/service/AccountService.java</file>
         </group>
     </open-files>
 </project-private>
