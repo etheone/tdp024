@@ -23,7 +23,7 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade{
 
     @Override
     public long create(String type, long amount, 
-            String date, String status, Account account) {
+            String created, String status, Account account) {
         
         EntityManager em = EMF.getEntityManager();
         
@@ -34,7 +34,7 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade{
             Transaction transaction = new TransactionDB();
             transaction.setType(type);
             transaction.setAmount(amount);
-            transaction.setDate(date);
+            transaction.setDate(created);
             transaction.setStatus(status);
             transaction.setAccount(account);
             

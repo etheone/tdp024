@@ -4,6 +4,7 @@ import java.util.List;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Test;
+
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.facade.TransactionEntityFacade;
@@ -32,7 +33,7 @@ public class AccountLogicFacadeTest {
     @Test
     public void testCreate() {
       
-        long id = accountLogicFacade.create("Tommy Lindman", "CHECK", "Bank of Sverige");
+        long id = accountLogicFacade.create("Tommy Lindman", "CHECK", "SWEDBANK");
         Assert.assertTrue(id != -1);
     }
     
@@ -68,22 +69,28 @@ public class AccountLogicFacadeTest {
     
     @Test
     public void testFindAllTransactions() {
-        
-        long accountId = accountLogicFacade.create("Tommy Lindman", "CHECK", "Bank of Sverige");
+        System.out.println("testFindAllTransactions");
+        long accountId = accountLogicFacade.create("Tommy Lindman", "CHECK", "SWEDBANK");
         transactionLogicFacade.addTransaction(accountId, 100, "credit");
         transactionLogicFacade.addTransaction(accountId, 33, "debit");
         transactionLogicFacade.addTransaction(accountId, 31, "debit");
         transactionLogicFacade.addTransaction(accountId, 2, "credit");
         
-        List<Transaction> allTransactions = accountLogicFacade.findAllTransactions(accountId);
-        /*
-        List<Account> accounts = accountLogicFacade.findAllAccounts("Tommy Lindman");
+        String allTransactions = accountLogicFacade.findAllTransactions(accountId);
+        
+     
+        
+        String json = accountLogicFacade.findAllAccounts("Tommy Lindman");
+        System.out.println(json);
+        System.out.println("JSONJSONJSONJSONJSONJSONJSON");
+        System.out.println(allTransactions);
+        /*List<Account> accounts = 
         Account account = accounts.get(0);
         long amount = account.getHoldings();
         
         Assert.assertEquals(38, amount);
         Assert.assertNotNull(allTransactions);
-        Assert.assertEquals(4, allTransactions.size());
-                */
+        Assert.assertEquals(4, allTransactions.size());*/
+                
     }
 }

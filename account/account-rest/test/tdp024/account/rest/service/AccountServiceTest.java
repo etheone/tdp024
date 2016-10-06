@@ -57,7 +57,7 @@ public class AccountServiceTest {
             String bank = "SWEDBANK";
             String accountType = "CREDITCARD";
             
-            String response = httpHelper.get(ENDPOINT + "account/create/", "name", name, "bank", bank, "accounttype", accountType);
+            String response = httpHelper.get(ENDPOINT + "account/create", "name", name, "bank", bank, "accounttype", accountType);
             System.out.println("Response: " + response);
             if (response.equals("OK"))
                 System.out.println("Response is OK...");
@@ -82,6 +82,30 @@ public class AccountServiceTest {
         System.out.println("What we get back after find:");
         System.out.println(res.getEntity().toString());
     }
+    
+    @Test
+    public void testFindAllTransactions()
+    {
+        AccountService accountService = new AccountService();
+        
+        String name = "Marcus Bendtsen";
+        String bank = "SWEDBANK";
+        String accountType = "SAVINGS";
+        Response response = accountService.create(name, accountType, bank);
+        //System.out.println("The response after bad create:");
+        //System.out.println(response.getEntity().toString());
+        
+       accountService.credit(1, 200);
+       accountService.credit(1, 200);
+       
+        
+        Response res = accountService.findTransactions(1);
+        System.out.println("=====================================================");
+        System.out.println("What we get back after find:");
+        System.out.println(res.getEntity().toString());
+    }
+    
+    
     
     /*
     @Test
