@@ -13,6 +13,7 @@ import se.liu.ida.tdp024.account.util.http.HTTPHelperImpl;
  */
 
 public class AccountLoggerImpl implements AccountLogger {
+    
     HTTPHelper httpHelper = new HTTPHelperImpl();
             
     @Override

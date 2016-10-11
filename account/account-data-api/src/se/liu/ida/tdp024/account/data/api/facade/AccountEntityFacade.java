@@ -4,6 +4,10 @@ import java.util.List;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 
+/**
+ *
+ * @author emini901, tomli962
+ */
 public interface AccountEntityFacade {
     public long create(String personKey, String accountType, String bankKey);
     
