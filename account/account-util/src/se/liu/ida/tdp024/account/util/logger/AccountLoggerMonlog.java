@@ -33,16 +33,16 @@ public class AccountLoggerMonlog implements AccountLogger {
     }
 
     @Override
-    public void log(TodoLoggerLevel todoLoggerLevel, String shortMessage, String longMessage) {
+    public void log(AccountLoggerLevel accountLoggerLevel, String message) {
 
-        httpHelper.postJSON(
+        /*httpHelper.postJSON(
                 endpoint,
                 new String[]{"api_key", apikey, "format", "json"},
                 new String[]{
-            "severity", todoLoggerLevel.ordinal() + "",
+            "severity", accountLoggerLevel.ordinal() + "",
             "short_desc", shortMessage,
             "long_desc", longMessage,
             "timestamp", new Date().getTime() + ""});
-
+                */
     }
 }

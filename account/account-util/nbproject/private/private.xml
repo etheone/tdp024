@@ -3,7 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/tomli962/kurser/tdp024/tdp024/account/account-util/src/se/liu/ida/tdp024/account/util/http/HTTPHelperImpl.java</file>
+            <file>file:/home/emini901/tdp024/account/account-util/src/se/liu/ida/tdp024/account/util/logger/AccountLogger.java</file>
+            <file>file:/home/emini901/tdp024/account/account-util/src/se/liu/ida/tdp024/account/util/http/HTTPHelperImpl.java</file>
+            <file>file:/home/emini901/tdp024/account/account-util/src/se/liu/ida/tdp024/account/util/json/AccountJsonSerializerImpl.java</file>
+            <file>file:/home/emini901/tdp024/account/account-util/src/se/liu/ida/tdp024/account/util/json/AccountJsonSerializer.java</file>
+            <file>file:/home/emini901/tdp024/account/account-util/src/se/liu/ida/tdp024/account/util/logger/AccountLoggerImpl.java</file>
         </group>
     </open-files>
 </project-private>
