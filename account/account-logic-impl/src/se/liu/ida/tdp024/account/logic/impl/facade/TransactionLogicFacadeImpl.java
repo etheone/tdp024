@@ -5,6 +5,7 @@
  */
 package se.liu.ida.tdp024.account.logic.impl.facade;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.net.ssl.SSLEngineResult;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
@@ -40,19 +41,21 @@ public class TransactionLogicFacadeImpl implements TransactionLogicFacade {
         
         if (account != null) {
             
-            String status = "FAILED";
+            String status = null;
             
             if (type.equals("CREDIT")) {
                 status = "OK";
-            } else if((account.getHoldings() - amount) >= 0) {
+           /* } else if((account.getHoldings() - amount) >= 0) {
                 status = "OK";
+            }*/
             }
-            
             TransactionEntityFacade transactionEntityFacadeDB = new TransactionEntityFacadeDB();
             Date created = new Date();
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             
             try {
-                long transId = transactionEntityFacadeDB.create(type, amount, created.toString(), status, account);
+                //long transId = transactionEntityFacadeDB.create(type, amount, created.toString(), status, account);
+                long transId = transactionEntityFacadeDB.create(type, amount, dateFormat.format(created), status, account);         
                 accountEntityFacadeDB.addTransaction(accountId, transId);
                 return status;
             } catch(Exception e) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="li2-10" name="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" skipped="0" tests="3" time="45.485" timestamp="2016-10-06T13:21:48">
+<testsuite errors="0" failures="0" hostname="li17-16" name="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" skipped="0" tests="3" time="47.979" timestamp="2016-10-11T09:25:01">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="SE" />
@@ -55,7 +55,7 @@
     <property name="copylibs.rebase" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/emini901/tdp024/account/account-xfinal-test/build/test/results/TEST-se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.xml crashfile=/home/emini901/tdp024/account/account-xfinal-test/build/junitvmwatcher3964444409444910437.properties propsfile=/home/emini901/tdp024/account/account-xfinal-test/build/junit4109017682875165631.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/emini901/tdp024/account/account-xfinal-test/build/test/results/TEST-se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest.xml crashfile=/home/emini901/tdp024/account/account-xfinal-test/build/junitvmwatcher2308815592462810993.properties propsfile=/home/emini901/tdp024/account/account-xfinal-test/build/junit8656330179101768251.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -96,7 +96,7 @@
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="/" />
     <property name="libs.Java-EE-GlassFish-v3-Prelude.maven-pom" value="" />
-    <property name="javac.includesfile.binary" value="/home/emini901/tdp024/account/account-xfinal-test/null886532928" />
+    <property name="javac.includesfile.binary" value="/home/emini901/tdp024/account/account-xfinal-test/null1281524738" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="true" />
     <property name="javac.test.processorpath" value="../account-util/dist/account-util.jar:../lib/jackson-annotations-2.2.2.jar:../lib/jackson-core-2.2.2.jar:../lib/jackson-databind-2.2.1.jar:../lib/junit-4.10.jar:build/classes:/home/TDP024/netbeans-8.0.1/platform/modules/ext/junit-4.10.jar" />
@@ -151,7 +151,7 @@
     <property name="libs.swing-layout.javadoc" value="/home/TDP024/netbeans-8.0.1/platform/docs/swing-layout-1.0.4-doc.zip" />
     <property name="sun.java2d.dpiaware" value="true" />
     <property name="libs.hibernate4-persistence.maven-pom" value="" />
-    <property name="https.nonProxyHosts" value="localhost|127.0.0.1|li2-10" />
+    <property name="https.nonProxyHosts" value="localhost|127.0.0.1|li17-16" />
     <property name="libs.PostgreSQLDriver.maven-pom" value="" />
     <property name="java.class.version" value="51.0" />
     <property name="libs.JAVADB_DRIVER_LABEL.classpath" value="/sw/jdk7/db/lib/derby.jar:/sw/jdk7/db/lib/derbyclient.jar:/sw/jdk7/db/lib/derbynet.jar" />
@@ -187,7 +187,7 @@
     <property name="libs.restlib.classpath" value="/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/asm-all-repackaged-2.2.0-b21.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/cglib-2.2.0-b21.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/guava-14.0.1.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/hk2-api-2.2.0-b21.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/hk2-locator-2.2.0-b21.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/hk2-utils-2.2.0-b21.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/javax.annotation-api-1.2.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/javax.inject-2.2.0-b21.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/javax.servlet-api-3.0.1.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/jaxb-api-2.2.7.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/jersey-entity-filtering-2.5.1.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/jersey-media-moxy-2.5.1.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/org.osgi.core-4.2.0.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/osgi-resource-locator-1.0.1.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/persistence-api-1.0.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/ext/validation-api-1.1.0.Final.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/jersey-client.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/jersey-common.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/jersey-container-servlet.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/jersey-container-servlet-core.jar:/home/TDP024/netbeans-8.0.1/enterprise/modules/ext/jersey2/jersey-server.jar:/home/TDP024/netbeans-8.0.1/java/modules/ext/eclipselink/eclipselink.jar" />
     <property name="libs.MySQLDriver.maven-pom" value="" />
     <property name="libs.hibernate4-persistence.javadoc" value="/home/TDP024/netbeans-8.0.1/java/modules/ext/docs/javax.persistence-2.1.0-doc.zip" />
-    <property name="http.nonProxyHosts" value="localhost|127.0.0.1|li2-10" />
+    <property name="http.nonProxyHosts" value="localhost|127.0.0.1|li17-16" />
     <property name="libs.junit_4.javadoc" value="/home/TDP024/netbeans-8.0.1/java/docs/junit-4.10-javadoc.jar" />
     <property name="libs.EclipseLink-GlassFish-v3.maven-pom" value="" />
     <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
@@ -391,15 +391,15 @@
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="/home/TDP024/netbeans-8.0.1/enterprise/docs/javaee-doc-api.jar" />
   </properties>
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testDebitConcurrency" time="24.437" />
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testFind" time="0.101" />
-  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testCreditConcurrency" time="20.886" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testDebitConcurrency" time="26.527" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testCreditConcurrency" time="21.305" />
+  <testcase classname="se.liu.ida.tdp024.account.xfinal.test.account.TransactionTest" name="testFind" time="0.085" />
   <system-out><![CDATA[£££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££
 1 0
-[{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}]*****************
+[{"id":2004,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}]*****************
 ********************JSON****************
-[{"id":1004,"type":"CREDIT","amount":200,"created":"Thu Oct 06 15:22:12 CEST 2016","status":"OK","account":{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":1005,"type":"DEBIT","amount":50,"created":"Thu Oct 06 15:22:12 CEST 2016","status":"OK","account":{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":1006,"type":"CREDIT","amount":25,"created":"Thu Oct 06 15:22:12 CEST 2016","status":"OK","account":{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":1007,"type":"DEBIT","amount":100,"created":"Thu Oct 06 15:22:12 CEST 2016","status":"OK","account":{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":1008,"type":"DEBIT","amount":75,"created":"Thu Oct 06 15:22:12 CEST 2016","status":"OK","account":{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":1009,"type":"DEBIT","amount":10,"created":"Thu Oct 06 15:22:12 CEST 2016","status":"FAILED","account":{"id":1003,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}}]
-[Lse.liu.ida.tdp024.account.xfinal.test.util.TransactionDTO;@e757105
+[{"id":2005,"type":"CREDIT","amount":200,"created":"2016-10-11 11:25:49","status":"OK","account":{"id":2004,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":2006,"type":"DEBIT","amount":50,"created":"2016-10-11 11:25:49","status":"OK","account":{"id":2004,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":2007,"type":"CREDIT","amount":25,"created":"2016-10-11 11:25:49","status":"OK","account":{"id":2004,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":2008,"type":"DEBIT","amount":100,"created":"2016-10-11 11:25:49","status":"OK","account":{"id":2004,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":2009,"type":"DEBIT","amount":75,"created":"2016-10-11 11:25:49","status":"OK","account":{"id":2004,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}},{"id":2010,"type":"DEBIT","amount":10,"created":"2016-10-11 11:25:49","status":"FAILED","account":{"id":2004,"personKey":"\"a91wadaw2as\"","bankKey":"\"ad0SD16727ak\"","accountType":"SAVINGS","holdings":0}}]
+[Lse.liu.ida.tdp024.account.xfinal.test.util.TransactionDTO;@304b0059
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

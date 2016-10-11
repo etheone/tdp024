@@ -64,16 +64,27 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             
             //account.addTransactionToAccount(transaction);
             
-            if(transaction.getStatus().equals("OK")) {
+          /*  if(transaction.getStatus().equals("OK")) {
                 if (transaction.getType().equals("DEBIT"))  {
                     withdraw(accountId, transaction.getAmount(), account);
                 } else {
                     deposit(accountId, transaction.getAmount(), account);
                 }
+            }*/
+            
+            if(transaction.getType().equals("CREDIT")) {
+                deposit(accountId, transaction.getAmount(), account);
+            } else {
+                if(account.getHoldings() - transaction.getAmount() >= 0) {
+                    withdraw(accountId, transaction.getAmount(), account);
+                    transaction.setStatus("OK");
+                } else {
+                    transaction.setStatus("FAILED");
+                }
             }
             
             
-            //em.merge(transaction);
+            em.merge(transaction);
             em.merge(account);
             em.getTransaction().commit();
         } catch (Exception e) {
