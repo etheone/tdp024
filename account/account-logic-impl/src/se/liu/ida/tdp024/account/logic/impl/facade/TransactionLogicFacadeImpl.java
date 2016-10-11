@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package se.liu.ida.tdp024.account.logic.impl.facade;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import javax.net.ssl.SSLEngineResult;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
@@ -15,6 +9,8 @@ import se.liu.ida.tdp024.account.data.api.facade.TransactionEntityFacade;
 import se.liu.ida.tdp024.account.data.impl.db.facade.AccountEntityFacadeDB;
 import se.liu.ida.tdp024.account.data.impl.db.facade.TransactionEntityFacadeDB;
 import se.liu.ida.tdp024.account.logic.api.facade.TransactionLogicFacade;
+import se.liu.ida.tdp024.account.util.logger.AccountLogger;
+import se.liu.ida.tdp024.account.util.logger.AccountLoggerImpl;
 
 /**
  *
@@ -22,44 +18,44 @@ import se.liu.ida.tdp024.account.logic.api.facade.TransactionLogicFacade;
  */
 public class TransactionLogicFacadeImpl implements TransactionLogicFacade {
 
-    private TransactionEntityFacade transactionEntityFacade;
+    private static final AccountLogger accountLogger = new AccountLoggerImpl();
+    private final TransactionEntityFacade transactionEntityFacade;
     
     public TransactionLogicFacadeImpl(TransactionEntityFacade transactionEntityFacade) {
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "Constructor for TransactionLogicFacadeImpl called.");                
         this.transactionEntityFacade = transactionEntityFacade;
     }
     
     @Override
     public long create(String type, long amount, String date, String status, Account account) {
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "TransactionLogicFacadeImpl.create called.");
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public String addTransaction(long accountId, long amount, String type) {
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "TransactionLogicFacadeImpl.addTransaction called.");
         
         AccountEntityFacade accountEntityFacadeDB = new AccountEntityFacadeDB();
         Account account = accountEntityFacadeDB.find(accountId);
         
         if (account != null) {
-            
             String status = null;
-            
             if (type.equals("CREDIT")) {
                 status = "OK";
-           /* } else if((account.getHoldings() - amount) >= 0) {
-                status = "OK";
-            }*/
             }
+            
             TransactionEntityFacade transactionEntityFacadeDB = new TransactionEntityFacadeDB();
             Date created = new Date();
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             
             try {
-                //long transId = transactionEntityFacadeDB.create(type, amount, created.toString(), status, account);
+                // We should REALLY change this to use the private member variable!!!!
                 long transId = transactionEntityFacadeDB.create(type, amount, dateFormat.format(created), status, account);         
                 accountEntityFacadeDB.addTransaction(accountId, transId);
                 return status;
             } catch(Exception e) {
-                //trans was not creator or not added to account
+                accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to add transaction in TransactionLogicFacadeImpl.addTransaction.");
                 
                 return e.getStackTrace().toString();
             }
@@ -73,6 +69,7 @@ public class TransactionLogicFacadeImpl implements TransactionLogicFacade {
 
     @Override
     public Transaction find(long id) {
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "TransactionLogicFacadeImpl.find called.");
         
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

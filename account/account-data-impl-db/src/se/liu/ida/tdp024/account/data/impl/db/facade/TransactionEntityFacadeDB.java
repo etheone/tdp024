@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package se.liu.ida.tdp024.account.data.impl.db.facade;
 
 import java.util.List;
@@ -14,19 +9,23 @@ import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.facade.TransactionEntityFacade;
 import se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB;
 import se.liu.ida.tdp024.account.data.impl.db.util.EMF;
+import se.liu.ida.tdp024.account.util.logger.AccountLogger;
+import se.liu.ida.tdp024.account.util.logger.AccountLoggerImpl;
 
 /**
  *
- * @author emini901
+ * @author emini901, tomli962
  */
 public class TransactionEntityFacadeDB implements TransactionEntityFacade{
 
+    private static final AccountLogger accountLogger = new AccountLoggerImpl();
+    
     @Override
     public long create(String type, long amount, 
             String created, String status, Account account) {
-        
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "TransactionEntityFacadeBD.create called.");
+
         EntityManager em = EMF.getEntityManager();
-        
         try {
             
             em.getTransaction().begin();
@@ -43,7 +42,7 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade{
             
             return transaction.getId();
         } catch (Exception e) {
-            // Log stuff
+            accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to create new transaction in TransactionEntityFacadeBD.create");
             throw new ServiceConfigurationError("Commit failed.");
         } finally {
             
@@ -56,12 +55,13 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade{
 
     @Override
     public Transaction find(long id) {
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "TransactionEntityFacadeBD.find called.");
         EntityManager em = EMF.getEntityManager();
         
         try {
             return em.find(TransactionDB.class, id);
         } catch(Exception e) {
-            //logg stuff
+            accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to find transaction in TransactionEntityFacadeBD.find");            
             return null;
         } finally {
             em.close();
@@ -70,6 +70,7 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade{
 
     @Override
     public List<Transaction> findAll(long id) {
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "TransactionEntityFacadeBD.findAll called.");        
         EntityManager em = EMF.getEntityManager();
         
         try {
@@ -80,7 +81,7 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade{
             System.out.println(queryList);
             return queryList;
         } catch(Exception e) {
-            //log
+            accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to find all transaction in TransactionEntityFacadeBD.findAll");            
             return null;
         } finally {
             em.close();

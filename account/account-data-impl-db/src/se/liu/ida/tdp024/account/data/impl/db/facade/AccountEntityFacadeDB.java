@@ -12,11 +12,16 @@ import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
 import se.liu.ida.tdp024.account.data.impl.db.entity.AccountDB;
 import se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB;
 import se.liu.ida.tdp024.account.data.impl.db.util.EMF;
+import se.liu.ida.tdp024.account.util.logger.AccountLogger;
+import se.liu.ida.tdp024.account.util.logger.AccountLoggerImpl;
 
 public class AccountEntityFacadeDB implements AccountEntityFacade {
 
+    private static final AccountLogger accountLogger = new AccountLoggerImpl();
+    
     @Override
     public long create(String personKey, String accountType, String bankKey) {
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "AccountEntityFacadeBD.create called.");
         
         EntityManager em = EMF.getEntityManager();
         try {
@@ -28,7 +33,6 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             account.setBankKey(bankKey);
             account.setAccountType(accountType);
             account.setHoldings(0);
-            //account.setTransactions(new ArrayList<Transaction>());
             
             em.persist(account);
             em.getTransaction().commit();
@@ -37,7 +41,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             
             
         } catch (Exception e) {
-            
+            accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to create new account in AccountEntityFacadeBD.create");
             throw new ServiceConfigurationError("commit failed");
             
         } finally {
@@ -52,6 +56,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     @Override
     public void addTransaction(long accountId, long transactionId)
     {
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "AccountEntityFacadeBD.addTransaction called.");        
         EntityManager em = EMF.getEntityManager();
         
         try {
@@ -60,17 +65,6 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             Account account = em.find(AccountDB.class, accountId, LockModeType.PESSIMISTIC_WRITE);
             
             Transaction transaction = em.find(TransactionDB.class, transactionId);
-            //transaction.setAccount(account);
-            
-            //account.addTransactionToAccount(transaction);
-            
-          /*  if(transaction.getStatus().equals("OK")) {
-                if (transaction.getType().equals("DEBIT"))  {
-                    withdraw(accountId, transaction.getAmount(), account);
-                } else {
-                    deposit(accountId, transaction.getAmount(), account);
-                }
-            }*/
             
             if(transaction.getType().equals("CREDIT")) {
                 deposit(accountId, transaction.getAmount(), account);
@@ -88,7 +82,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             em.merge(account);
             em.getTransaction().commit();
         } catch (Exception e) {
-            // Log stuff
+            accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to add new transaction in AccountEntityFacadeBD.addTransaction");            
             return;
         } finally {
             if (em.getTransaction().isActive()) {
@@ -100,13 +94,13 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
     
     @Override
     public Account find(long id) {
-        
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "AccountEntityFacadeBD.find called.");        
         EntityManager em = EMF.getEntityManager();
         
         try {
             return em.find(AccountDB.class, id, LockModeType.PESSIMISTIC_READ);
         } catch(Exception e) {
-            //logg stuff
+            accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to find account in AccountEntityFacadeBD.find");            
             return null;
         } finally {
             em.close();
@@ -115,18 +109,14 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
 
     @Override
     public List<Account> findAll(String personKey) {
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "AccountEntityFacadeBD.findAll called.");                
         EntityManager em = EMF.getEntityManager();
-        
         try {
             Query query = em.createQuery("SELECT t from AccountDB t WHERE t.personKey = :pk");
             query.setParameter("pk", personKey);
             return query.getResultList();
-        } catch(Exception e) {
-            System.out.println("=======================**************************====================");
-            System.out.println("=======================**************************====================");
-            System.out.println("=======================**************************====================");
-            e.printStackTrace();
-            //log
+        } catch(Exception e) {            
+            accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to find all account in AccountEntityFacadeBD.findAll");            
             return null;
         } finally {
             em.close();
@@ -135,90 +125,48 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
 
     @Override
     public String getType(long id) {
-             
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "AccountEntityFacadeBD.getType called.");   
         try {
             Account account = find(id);
             return account.getAccountType();
         } catch(Exception e) {
-            //logg stuff
+            accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to get type account in AccountEntityFacadeBD.getType");                        
             return null;
         }
     }
 
     @Override
     public Account withdraw(long id, long amount, Account account) {
-        //EntityManager em = EMF.getEntityManager();
-        //try {
-            //em.getTransaction().begin();
-            
-            //Account account = em.find(AccountDB.class, id);
-            account.setHoldings(account.getHoldings() - amount);
-            
-            //em.merge(account);
-            
-            //em.getTransaction().commit();
-         /*   
-        } catch(Exception e) {
-            //logg stuff
-        } finally {
-            if (em.getTransaction().isActive()) {
-                em.getTransaction().rollback();
-            }
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "AccountEntityFacadeBD.withdraw called.");           
+        account.setHoldings(account.getHoldings() - amount);
 
-            em.close();
-        }*/
-        /*
-        try {
-            Account account = find(id);
-            account.setHoldings(account.getHoldings() - amount);
-            
-        } catch(Exception e) {
-            //logg stuff
-        }*/
-         return account;
+        return account;
     }
 
     @Override
     public Account deposit(long id, long amount, Account account) {
-        
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "AccountEntityFacadeBD.deposit called.");                   
         account.setHoldings(account.getHoldings() + amount);
-       /* EntityManager em = EMF.getEntityManager();
-        try {
-            em.getTransaction().begin();
-            
-            Account account = em.find(AccountDB.class, id, LockModeType.PESSIMISTIC_WRITE);
-            
-            
-            em.merge(account);
-            
-            em.getTransaction().commit();
-            
-        } catch(Exception e) {
-            //logg stuff
-        } finally {
-            if (em.getTransaction().isActive()) {
-                em.getTransaction().rollback();
-            }
-
-            em.close();
-        }*/
+ 
         return account;
     }
 
     @Override
     public long checkBalance(long id) {
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "AccountEntityFacadeBD.checkBalance called.");                   
         try {
             Account account = find(id);
             return account.getHoldings();
             
         } catch(Exception e) {
-            //logg stuff
-            return -1; //fix later
+            accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to check balance in AccountEntityFacadeBD.checkBalance");                        
+            return -1;
         }
     }
 
     @Override
     public List<Transaction> findAllTransactions(long accountId) {
+        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "AccountEntityFacadeBD.findAllTransactions called.");
         List a = new ArrayList<Transaction>();
         EntityManager em = EMF.getEntityManager();
         
@@ -228,11 +176,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             query.setParameter("id", accountId);
             return query.getResultList();
         } catch(Exception e) {
-            System.out.println("=======================**************************====================");
-            System.out.println("=======================**************************====================");
-            System.out.println("=======================**************************====================");
-            e.printStackTrace();
-            //log
+            accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to find all transactions in AccountEntityFacadeBD.findAllTransactions");                        
             return null;
         } finally {
             if (em.getTransaction().isActive()) {

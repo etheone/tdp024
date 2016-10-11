@@ -14,7 +14,7 @@ import se.liu.ida.tdp024.account.util.logger.AccountLoggerImpl;
 
 public class HTTPHelperImpl implements HTTPHelper {
 
-    private AccountLogger accountLogger = new AccountLoggerImpl();
+    //private AccountLogger accountLogger = new AccountLoggerImpl();
 
     @Override
     public String get(String endpoint, String... parameters) {
@@ -36,7 +36,7 @@ public class HTTPHelperImpl implements HTTPHelper {
             }
             rd.close();
         } catch (Exception e) {
-            accountLogger.log(e);
+            //accountLogger.log(e);
         }
         return result;
 
@@ -116,7 +116,7 @@ public class HTTPHelperImpl implements HTTPHelper {
 
                 urlBuilder.append(parameterName).append("=").append(parameterValue);
             } catch (Exception e) {
-                accountLogger.log(e);
+                //accountLogger.log(e);
             }
 
         }
