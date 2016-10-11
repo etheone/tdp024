@@ -64,12 +64,12 @@ public class AccountEntityFacadeTest {
         long savings = accountEntityFacade.checkBalance(id1);
         Assert.assertNotNull(savings);
         Assert.assertEquals(0, savings);
-        accountEntityFacade.deposit(id1, 50);
+        //accountEntityFacade.deposit(id1, 50);
         savings = accountEntityFacade.checkBalance(id1);
         Assert.assertNotNull(savings);
         Assert.assertEquals(50, savings);
         // Testing to withdraw
-        accountEntityFacade.withdraw(id1, 30);
+        //accountEntityFacade.withdraw(id1, 30);
         savings = accountEntityFacade.checkBalance(id1);
         Assert.assertEquals(20, savings);
                 */
