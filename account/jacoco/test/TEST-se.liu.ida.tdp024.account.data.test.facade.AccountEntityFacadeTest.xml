@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="li14-4" name="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" skipped="0" tests="5" time="5.86" timestamp="2016-10-11T11:23:24">
+<testsuite errors="0" failures="0" hostname="li15-16" name="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" skipped="0" tests="5" time="5.076" timestamp="2016-10-18T10:02:40">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
-    <property name="sonar.projectName" value="tdp024_grupp_xx_2016" />
+    <property name="sonar.projectName" value="tdp024_grupp_a2_2016" />
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
     <property name="os.name" value="Linux" />
     <property name="sun.boot.class.path" value="/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/classes" />
@@ -13,11 +13,10 @@
     <property name="java.runtime.version" value="1.7.0_111-b01" />
     <property name="sonar.jdbc.password" value="sonar_17f4" />
     <property name="user.name" value="emini901" />
-    <property name="ant.file.tdp024_grupp_xx_2016" value="/home/emini901/tdp024/account/build.xml" />
     <property name="user.language" value="sv" />
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64" />
     <property name="ant.project.default-target" value="default" />
-    <property name="ant.project.name" value="tdp024_grupp_xx_2016" />
+    <property name="ant.project.name" value="tdp024_grupp_a2_2016" />
     <property name="java.version" value="1.7.0_111" />
     <property name="user.timezone" value="" />
     <property name="sun.arch.data.model" value="64" />
@@ -30,9 +29,9 @@
     <property name="file.encoding.pkg" value="sun.io" />
     <property name="file.separator" value="/" />
     <property name="java.specification.name" value="Java Platform API Specification" />
-    <property name="ant.file.type.tdp024_grupp_xx_2016" value="file" />
     <property name="sonar.sources" value="   account-data-api/src,   account-data-impl-db/src,   account-logic-api/src,   account-logic-impl/src,   account-rest/src/java   " />
     <property name="java.class.version" value="51.0" />
+    <property name="ant.file.tdp024_grupp_a2_2016" value="/home/emini901/tdp024/account/build.xml" />
     <property name="user.country" value="SE" />
     <property name="java.home" value="/usr/lib/jvm/java-7-openjdk-amd64/jre" />
     <property name="java.vm.info" value="mixed mode" />
@@ -43,11 +42,11 @@
     <property name="path.separator" value=":" />
     <property name="java.vm.version" value="24.111-b01" />
     <property name="ant.library.dir" value="/usr/share/ant/lib" />
-    <property name="sonar.login" value="your_username" />
+    <property name="sonar.login" value="grupp-a2-2016" />
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
     <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
-    <property name="_jacoco.agentFile" value="/tmp/jacocoagent5798926209110849374.jar" />
+    <property name="_jacoco.agentFile" value="/tmp/jacocoagent8206881657008055711.jar" />
     <property name="sonar.tests" value="    account-data-test/test,    account-logic-test/test,    account-rest/test    " />
     <property name="jacoco.exec.file" value="jacoco/jacoco.exec" />
     <property name="user.home" value="/home/emini901" />
@@ -57,9 +56,10 @@
     <property name="java.library.path" value="/sw/gcc-6.1.0/lib64:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib" />
     <property name="java.vendor.url" value="http://java.oracle.com/" />
     <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="ant.file.type.tdp024_grupp_a2_2016" value="file" />
     <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/emini901/tdp024/account/jacoco/test/TEST-se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest.xml crashfile=/home/emini901/tdp024/account/junitvmwatcher2852697202820742256.properties propsfile=/home/emini901/tdp024/account/junit6927389140906784226.properties" />
-    <property name="java.class.path" value="/home/emini901/tdp024/account/account-data-api/build/classes:/home/emini901/tdp024/account/account-data-impl-db/build/classes:/home/emini901/tdp024/account/account-logic-api/build/classes:/home/emini901/tdp024/account/account-logic-impl/build/classes:/home/emini901/tdp024/account/account-rest/build/web/WEB-INF/classes:/home/emini901/tdp024/account/account-util/build/classes:/home/emini901/tdp024/account/account-data-test/build/test/classes:/home/emini901/tdp024/account/account-logic-test/build/test/classes:/home/emini901/tdp024/account/account-rest/build/test/classes:/home/emini901/tdp024/account/lib/ant-contrib-1.0b3.jar:/home/emini901/tdp024/account/lib/derby.jar:/home/emini901/tdp024/account/lib/eclipselink-2.3.0.jar:/home/emini901/tdp024/account/lib/jackson-annotations-2.2.2.jar:/home/emini901/tdp024/account/lib/jackson-core-2.2.2.jar:/home/emini901/tdp024/account/lib/jackson-databind-2.2.1.jar:/home/emini901/tdp024/account/lib/jacocoagent.jar:/home/emini901/tdp024/account/lib/jacocoant.jar:/home/emini901/tdp024/account/lib/javax.persistence-2.0.jar:/home/emini901/tdp024/account/lib/jaxb/activation.jar:/home/emini901/tdp024/account/lib/jaxb/jaxb-api.jar:/home/emini901/tdp024/account/lib/jaxb/jsr173_api.jar:/home/emini901/tdp024/account/lib/jersey/asm-3.1.jar:/home/emini901/tdp024/account/lib/jersey/jackson-core-asl-1.7.1.jar:/home/emini901/tdp024/account/lib/jersey/jackson-jaxrs-1.7.1.jar:/home/emini901/tdp024/account/lib/jersey/jackson-mapper-asl-1.7.1.jar:/home/emini901/tdp024/account/lib/jersey/jackson-xc-1.7.1.jar:/home/emini901/tdp024/account/lib/jersey/jersey-apache-client-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-atom-abdera-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-client-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-core-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-guice-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-json-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-multipart-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-server-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-simple-server-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-spring-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jettison-1.1.jar:/home/emini901/tdp024/account/lib/jersey/jsr311-api-1.1.1.jar:/home/emini901/tdp024/account/lib/jersey/oauth-client-1.8.jar:/home/emini901/tdp024/account/lib/jersey/oauth-server-1.8.jar:/home/emini901/tdp024/account/lib/jersey/oauth-signature-1.8.jar:/home/emini901/tdp024/account/lib/junit-4.10.jar:/home/emini901/tdp024/account/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar:/home/emini901/tdp024/account/lib/org.eclipse.persistence.jpa.jpql_1.0.0.jar:/home/emini901/tdp024/account/lib/sonar-ant-task-2.1.jar:/usr/share/java/ant-launcher-1.9.3.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar:/tmp/jacocoagent5798926209110849374.jar" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/emini901/tdp024/account/jacoco/test/TEST-se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest.xml crashfile=/home/emini901/tdp024/account/junitvmwatcher6821224524323972234.properties propsfile=/home/emini901/tdp024/account/junit7553960069905512544.properties" />
+    <property name="java.class.path" value="/home/emini901/tdp024/account/account-data-api/build/classes:/home/emini901/tdp024/account/account-data-impl-db/build/classes:/home/emini901/tdp024/account/account-logic-api/build/classes:/home/emini901/tdp024/account/account-logic-impl/build/classes:/home/emini901/tdp024/account/account-rest/build/web/WEB-INF/classes:/home/emini901/tdp024/account/account-util/build/classes:/home/emini901/tdp024/account/account-data-test/build/test/classes:/home/emini901/tdp024/account/account-logic-test/build/test/classes:/home/emini901/tdp024/account/account-rest/build/test/classes:/home/emini901/tdp024/account/lib/ant-contrib-1.0b3.jar:/home/emini901/tdp024/account/lib/derby.jar:/home/emini901/tdp024/account/lib/eclipselink-2.3.0.jar:/home/emini901/tdp024/account/lib/jackson-annotations-2.2.2.jar:/home/emini901/tdp024/account/lib/jackson-core-2.2.2.jar:/home/emini901/tdp024/account/lib/jackson-databind-2.2.1.jar:/home/emini901/tdp024/account/lib/jacocoagent.jar:/home/emini901/tdp024/account/lib/jacocoant.jar:/home/emini901/tdp024/account/lib/javax.persistence-2.0.jar:/home/emini901/tdp024/account/lib/jaxb/activation.jar:/home/emini901/tdp024/account/lib/jaxb/jaxb-api.jar:/home/emini901/tdp024/account/lib/jaxb/jsr173_api.jar:/home/emini901/tdp024/account/lib/jersey/asm-3.1.jar:/home/emini901/tdp024/account/lib/jersey/jackson-core-asl-1.7.1.jar:/home/emini901/tdp024/account/lib/jersey/jackson-jaxrs-1.7.1.jar:/home/emini901/tdp024/account/lib/jersey/jackson-mapper-asl-1.7.1.jar:/home/emini901/tdp024/account/lib/jersey/jackson-xc-1.7.1.jar:/home/emini901/tdp024/account/lib/jersey/jersey-apache-client-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-atom-abdera-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-client-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-core-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-guice-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-json-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-multipart-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-server-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-simple-server-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jersey-spring-1.8.jar:/home/emini901/tdp024/account/lib/jersey/jettison-1.1.jar:/home/emini901/tdp024/account/lib/jersey/jsr311-api-1.1.1.jar:/home/emini901/tdp024/account/lib/jersey/oauth-client-1.8.jar:/home/emini901/tdp024/account/lib/jersey/oauth-server-1.8.jar:/home/emini901/tdp024/account/lib/jersey/oauth-signature-1.8.jar:/home/emini901/tdp024/account/lib/junit-4.10.jar:/home/emini901/tdp024/account/lib/org-netbeans-modules-java-j2seproject-copylibstask.jar:/home/emini901/tdp024/account/lib/org.eclipse.persistence.jpa.jpql_1.0.0.jar:/home/emini901/tdp024/account/lib/sonar-ant-task-2.1.jar:/usr/share/ant/lib/junit.jar:/usr/share/java/ant-launcher-1.9.3.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar:/tmp/jacocoagent8206881657008055711.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.3 compiled on April 8 2014" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="ant.file.type" value="file" />
@@ -73,7 +73,7 @@
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
     <property name="java.ext.dirs" value="/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext" />
     <property name="user.dir" value="/home/emini901/tdp024/account" />
-    <property name="sonar.password" value="your_password" />
+    <property name="sonar.password" value="qcsf72td" />
     <property name="line.separator" value="&#xa;" />
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM" />
     <property name="basedir" value="/home/emini901/tdp024/account" />
@@ -82,67 +82,67 @@
     <property name="file.encoding" value="UTF-8" />
     <property name="java.specification.version" value="1.7" />
     <property name="ant.project.invoked-targets" value="jacoco" />
-    <property name="sonar.projectKey" value="tdp024_grupp_xx_2016" />
+    <property name="sonar.projectKey" value="tdp024_grupp_a2_2016" />
   </properties>
-  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testGetType" time="4.556" />
-  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testCheckBalance" time="0.254">
-    <failure message="expected:&lt;50&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;50&gt; but was:&lt;0&gt;
-	at se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest.testCheckBalance(AccountEntityFacadeTest.java:70)
-</failure>
-  </testcase>
-  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testCreate" time="0.187" />
-  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testFindAll" time="0.514" />
-  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testFind" time="0.197" />
-  <system-out><![CDATA[[EL Info]: 2016-10-11 13:23:26.217--ServerSession(1523926676)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2016-10-11 13:23:28.135--ServerSession(1523926676)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2016-10-11 13:23:28.419--ServerSession(1523926676)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testFind" time="3.949" />
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testFindAll" time="0.574" />
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testCheckBalance" time="0.0" />
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testCreate" time="0.198" />
+  <testcase classname="se.liu.ida.tdp024.account.data.test.facade.AccountEntityFacadeTest" name="testGetType" time="0.196" />
+  <system-out><![CDATA[[EL Info]: 2016-10-18 12:02:42.372--ServerSession(762580524)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2016-10-18 12:02:44.118--ServerSession(762580524)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2016-10-18 12:02:44.403--ServerSession(762580524)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'ALTER TABLE' cannot be performed on 'TRANSACTIONDB' because it does not exist.
 Error Code: 30000
 Call: ALTER TABLE TRANSACTIONDB DROP CONSTRAINT TRNSACTIONDBCCNTID
 Query: DataModifyQuery(sql="ALTER TABLE TRANSACTIONDB DROP CONSTRAINT TRNSACTIONDBCCNTID")
-[EL Warning]: 2016-10-11 13:23:28.423--ServerSession(1523926676)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Warning]: 2016-10-18 12:02:44.408--ServerSession(762580524)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'DROP TABLE' cannot be performed on 'ACCOUNTDB' because it does not exist.
 Error Code: 30000
 Call: DROP TABLE ACCOUNTDB
 Query: DataModifyQuery(sql="DROP TABLE ACCOUNTDB")
-[EL Warning]: 2016-10-11 13:23:28.499--ServerSession(1523926676)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Warning]: 2016-10-18 12:02:44.478--ServerSession(762580524)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLSyntaxErrorException: 'DROP TABLE' cannot be performed on 'TRANSACTIONDB' because it does not exist.
 Error Code: 30000
 Call: DROP TABLE TRANSACTIONDB
 Query: DataModifyQuery(sql="DROP TABLE TRANSACTIONDB")
-[EL Info]: 2016-10-11 13:23:28.994--ServerSession(1523926676)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU logout successful
-[EL Info]: 2016-10-11 13:23:29.055--ServerSession(1352489087)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2016-10-11 13:23:29.062--ServerSession(1352489087)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2016-10-11 13:23:29.204--ServerSession(1352489087)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2016-10-18 12:02:44.952--ServerSession(762580524)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2016-10-18 12:02:45.014--ServerSession(799990661)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2016-10-18 12:02:45.021--ServerSession(799990661)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2016-10-18 12:02:45.179--ServerSession(799990661)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-[EL Info]: 2016-10-11 13:23:29.25--ServerSession(1352489087)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU logout successful
-[EL Info]: 2016-10-11 13:23:29.315--ServerSession(1543877196)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2016-10-11 13:23:29.321--ServerSession(1543877196)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2016-10-11 13:23:29.43--ServerSession(1543877196)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2016-10-18 12:02:45.533--ServerSession(799990661)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2016-10-18 12:02:45.593--ServerSession(660406511)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2016-10-18 12:02:45.599--ServerSession(660406511)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2016-10-18 12:02:45.721--ServerSession(660406511)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-[EL Info]: 2016-10-11 13:23:29.446--ServerSession(1543877196)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU logout successful
-[EL Info]: 2016-10-11 13:23:29.499--ServerSession(1860933243)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2016-10-11 13:23:29.506--ServerSession(1860933243)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2016-10-11 13:23:29.62--ServerSession(1860933243)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+[EL Info]: 2016-10-18 12:02:45.739--ServerSession(660406511)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2016-10-18 12:02:45.794--ServerSession(1071545224)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
+[EL Info]: 2016-10-18 12:02:45.801--ServerSession(1071545224)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU login successful
+[EL Warning]: 2016-10-18 12:02:45.903--ServerSession(1071545224)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
 Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
 Error Code: 30000
 Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
 Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-[EL Info]: 2016-10-11 13:23:29.965--ServerSession(1860933243)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU logout successful
-[EL Info]: 2016-10-11 13:23:30.025--ServerSession(1601664231)--EclipseLink, version: Eclipse Persistence Services - 2.3.0.v20110604-r9504
-[EL Info]: 2016-10-11 13:23:30.03--ServerSession(1601664231)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU login successful
-[EL Warning]: 2016-10-11 13:23:30.127--ServerSession(1601664231)--Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
-Internal Exception: java.sql.SQLException: Table/View 'SEQUENCE' already exists in Schema 'APP'.
-Error Code: 30000
-Call: CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))
-Query: DataModifyQuery(sql="CREATE TABLE SEQUENCE (SEQ_NAME VARCHAR(50) NOT NULL, SEQ_COUNT DECIMAL(15), PRIMARY KEY (SEQ_NAME))")
-[EL Info]: 2016-10-11 13:23:30.166--ServerSession(1601664231)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU logout successful
+[EL Info]: 2016-10-18 12:02:45.939--ServerSession(1071545224)--file:/home/emini901/tdp024/account/account-data-impl-db/build/classes/_account-dataPU logout successful
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[AccountEntityFacadeBD.create called.
+AccountEntityFacadeBD.find called.
+AccountEntityFacadeBD.create called.
+AccountEntityFacadeBD.create called.
+AccountEntityFacadeBD.findAll called.
+AccountEntityFacadeBD.create called.
+AccountEntityFacadeBD.create called.
+AccountEntityFacadeBD.getType called.
+AccountEntityFacadeBD.find called.
+AccountEntityFacadeBD.create called.
+AccountEntityFacadeBD.getType called.
+AccountEntityFacadeBD.find called.
+]]></system-err>
 </testsuite>

@@ -8,7 +8,6 @@ import java.util.ServiceConfigurationError;
 import se.liu.ida.tdp024.account.data.api.entity.Account;
 import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.facade.AccountEntityFacade;
-import se.liu.ida.tdp024.account.data.api.facade.TransactionEntityFacade;
 import se.liu.ida.tdp024.account.logic.api.facade.AccountLogicFacade;
 import se.liu.ida.tdp024.account.util.http.HTTPHelper;
 import se.liu.ida.tdp024.account.util.http.HTTPHelperImpl;
@@ -21,12 +20,12 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
     
     private static final AccountLogger accountLogger = new AccountLoggerImpl();
     private final AccountEntityFacade accountEntityFacade;
-    private final TransactionEntityFacade transactionEntityFacade;
+    //private final TransactionEntityFacade transactionEntityFacade;
     
-    public AccountLogicFacadeImpl(AccountEntityFacade accountEntityFacade, TransactionEntityFacade transactionEntityFacade) {
+    public AccountLogicFacadeImpl(AccountEntityFacade accountEntityFacade) {
         accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "Constructor for AccountLogicFacadeImpl called.");        
         this.accountEntityFacade = accountEntityFacade;
-        this.transactionEntityFacade = transactionEntityFacade;
+      //  this.transactionEntityFacade = transactionEntityFacade;
     }
 
     @Override
@@ -50,13 +49,6 @@ public class AccountLogicFacadeImpl implements AccountLogicFacade {
         }
         
         return id;
-    }
-
-
-    @Override
-    public Account findByName(String name) {
-        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "AccountLogicFacadeImpl.findByName called.");
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     private String getPersonKey(String name) {

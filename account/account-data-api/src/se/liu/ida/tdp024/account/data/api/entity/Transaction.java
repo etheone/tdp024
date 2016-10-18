@@ -5,11 +5,13 @@
  */
 package se.liu.ida.tdp024.account.data.api.entity;
 
+import java.io.Serializable;
+
 /**
  *
  * @author emini901, tomli962
  */
-public interface Transaction {
+public interface Transaction extends Serializable {
     
     public long getId();
 

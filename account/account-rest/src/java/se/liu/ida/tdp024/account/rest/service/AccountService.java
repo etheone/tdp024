@@ -19,9 +19,9 @@ import se.liu.ida.tdp024.account.util.logger.AccountLoggerImpl;
 public class AccountService {
 
     private static final AccountLogger accountLogger = new AccountLoggerImpl();
-    private final AccountLogicFacade accountLogicFacade = new AccountLogicFacadeImpl(new AccountEntityFacadeDB(), new TransactionEntityFacadeDB());
+    private final AccountLogicFacade accountLogicFacade = new AccountLogicFacadeImpl(new AccountEntityFacadeDB());
     private final TransactionLogicFacade transactionLogicFacade = new TransactionLogicFacadeImpl(new TransactionEntityFacadeDB());
-    private final AccountJsonSerializer jsonSerializer = new AccountJsonSerializerImpl();
+    //private final AccountJsonSerializer jsonSerializer = new AccountJsonSerializerImpl();
     
     @GET
     @Path("create")

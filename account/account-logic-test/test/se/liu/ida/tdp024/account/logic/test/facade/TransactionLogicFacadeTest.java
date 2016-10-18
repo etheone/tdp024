@@ -5,6 +5,8 @@
  */
 package se.liu.ida.tdp024.account.logic.test.facade;
 
+import java.util.ArrayList;
+import java.util.List;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Test;
@@ -16,6 +18,9 @@ import se.liu.ida.tdp024.account.logic.api.facade.AccountLogicFacade;
 import se.liu.ida.tdp024.account.logic.api.facade.TransactionLogicFacade;
 import se.liu.ida.tdp024.account.logic.impl.facade.AccountLogicFacadeImpl;
 import se.liu.ida.tdp024.account.logic.impl.facade.TransactionLogicFacadeImpl;
+import se.liu.ida.tdp024.account.util.json.AccountJsonSerializer;
+import se.liu.ida.tdp024.account.util.json.AccountJsonSerializerImpl;
+import se.liu.ida.tdp024.account.util.logger.TransactionDTO;
 
 /**
  *
@@ -23,7 +28,7 @@ import se.liu.ida.tdp024.account.logic.impl.facade.TransactionLogicFacadeImpl;
  */
 public class TransactionLogicFacadeTest {
          //--- Unit under test ---//
-    public AccountLogicFacade accountLogicFacade = new AccountLogicFacadeImpl(new AccountEntityFacadeDB(), new TransactionEntityFacadeDB());
+    public AccountLogicFacade accountLogicFacade = new AccountLogicFacadeImpl(new AccountEntityFacadeDB());
     public TransactionLogicFacade transactionLogicFacade = new TransactionLogicFacadeImpl(new TransactionEntityFacadeDB());
     public StorageFacade storageFacade = new StorageFacadeDB();
     
@@ -34,19 +39,46 @@ public class TransactionLogicFacadeTest {
     
     @Test
     public void testAddTransaction() {
-        long accountId = accountLogicFacade.create("Tommy Lindman", "CHECK", "Bank of Sverige");
-        String status = transactionLogicFacade.addTransaction(accountId, 99, "CREDIT");
-        String statusFailed = transactionLogicFacade.addTransaction(accountId, 100, "DEBIT");
-        System.out.println("************* --------->    " + status);
-        Assert.assertTrue(status.equals("OK"));
-        Assert.assertTrue(statusFailed.equals("FAILED"));
+        AccountJsonSerializer jsonSerializer = new AccountJsonSerializerImpl();
+        long accountId = accountLogicFacade.create("Marcus Bendtsen", "CHECK", "SWEDBANK");
+        transactionLogicFacade.addTransaction(accountId, 99, "CREDIT");
+        transactionLogicFacade.addTransaction(accountId, 100, "DEBIT");
         
-        long accountId2 = accountLogicFacade.create("Charles Xavier", "CHECK", "Jotenheim National Bank");
-        String status2 = transactionLogicFacade.addTransaction(accountId2, 100, "CREDIT");
-        String status3 = transactionLogicFacade.addTransaction(accountId2, 100, "DEBIT");
-        System.out.println("************* --------->    " + status);
-        Assert.assertTrue(status2.equals("OK"));
-        Assert.assertTrue(status3.equals("OK"));
+       
+        String allTransactionsz = accountLogicFacade.findAllTransactions(accountId);
+        System.out.println(allTransactionsz);
+        
+        
+        TransactionDTO[] allTransactionz = jsonSerializer.fromJson(allTransactionsz, TransactionDTO[].class);
+        List<TransactionDTO> allTransactions = new ArrayList<TransactionDTO>();
+        for(TransactionDTO t: allTransactionz) {
+            allTransactions.add(t);
+        }
+        
+        
+        //System.out.println("************* --------->    " + status);
+        Assert.assertTrue(allTransactions.get(0).getStatus().equals("OK"));
+        Assert.assertTrue(allTransactions.get(1).getStatus().equals("FAILED"));
+        
+        
+        long accountId2 = accountLogicFacade.create("Marcus Bendtsen", "CHECK", "SWEDBANK");
+        transactionLogicFacade.addTransaction(accountId2, 100, "CREDIT");
+        transactionLogicFacade.addTransaction(accountId2, 100, "DEBIT");
+        allTransactionsz = accountLogicFacade.findAllTransactions(accountId2);
+        System.out.println(allTransactionsz);
+        
+        
+        allTransactionz = jsonSerializer.fromJson(allTransactionsz, TransactionDTO[].class);
+        allTransactions = new ArrayList<TransactionDTO>();
+        for(TransactionDTO t: allTransactionz) {
+            allTransactions.add(t);
+        }
+        
+        
+        //System.out.println("************* --------->    " + status);
+        Assert.assertTrue(allTransactions.get(0).getStatus().equals("OK"));
+        Assert.assertTrue(allTransactions.get(1).getStatus().equals("OK"));
+
         
     }
 }
