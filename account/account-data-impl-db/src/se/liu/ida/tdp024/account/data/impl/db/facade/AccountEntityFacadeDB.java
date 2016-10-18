@@ -60,17 +60,20 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
         EntityManager em = EMF.getEntityManager();
         
         try {
+            
             em.getTransaction().begin();
             
             Account account = em.find(AccountDB.class, accountId, LockModeType.PESSIMISTIC_WRITE);
             
             Transaction transaction = em.find(TransactionDB.class, transactionId);
-            
+           
             if(transaction.getType().equals("CREDIT")) {
-                deposit(accountId, transaction.getAmount(), account);
+                //deposit(accountId, transaction.getAmount(), account);
+                account.setHoldings(account.getHoldings() + transaction.getAmount());
             } else {
                 if(account.getHoldings() - transaction.getAmount() >= 0) {
-                    withdraw(accountId, transaction.getAmount(), account);
+                    //withdraw(accountId, transaction.getAmount(), account);
+                    account.setHoldings(account.getHoldings() - transaction.getAmount());
                     transaction.setStatus("OK");
                 } else {
                     transaction.setStatus("FAILED");
@@ -83,6 +86,7 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             em.getTransaction().commit();
         } catch (Exception e) {
             accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to add new transaction in AccountEntityFacadeBD.addTransaction");            
+            e.printStackTrace();
             return;
         } finally {
             if (em.getTransaction().isActive()) {
@@ -133,22 +137,6 @@ public class AccountEntityFacadeDB implements AccountEntityFacade {
             accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to get type account in AccountEntityFacadeBD.getType");                        
             return null;
         }
-    }
-
-    @Override
-    public Account withdraw(long id, long amount, Account account) {
-        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "AccountEntityFacadeBD.withdraw called.");           
-        account.setHoldings(account.getHoldings() - amount);
-
-        return account;
-    }
-
-    @Override
-    public Account deposit(long id, long amount, Account account) {
-        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "AccountEntityFacadeBD.deposit called.");                   
-        account.setHoldings(account.getHoldings() + amount);
- 
-        return account;
     }
 
     @Override

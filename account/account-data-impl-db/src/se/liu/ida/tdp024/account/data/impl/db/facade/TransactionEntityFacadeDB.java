@@ -67,25 +67,5 @@ public class TransactionEntityFacadeDB implements TransactionEntityFacade{
             em.close();
         }
     }
-
-    @Override
-    public List<Transaction> findAll(long id) {
-        accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "TransactionEntityFacadeBD.findAll called.");        
-        EntityManager em = EMF.getEntityManager();
-        
-        try {
-            Query query = em.createQuery("SELECT t from TransactionDB t WHERE t.account.id = :id");
-            query.setParameter("id", id);
-            List<Transaction> queryList = query.getResultList();
-            System.out.println("****************************QUERYLIST*****************'");
-            System.out.println(queryList);
-            return queryList;
-        } catch(Exception e) {
-            accountLogger.log(AccountLogger.AccountLoggerLevel.ERROR, "Failed to find all transaction in TransactionEntityFacadeBD.findAll");            
-            return null;
-        } finally {
-            em.close();
-        }
-    }
     
 }

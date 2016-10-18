@@ -26,11 +26,11 @@ public class TransactionLogicFacadeImpl implements TransactionLogicFacade {
         this.transactionEntityFacade = transactionEntityFacade;
     }
     
-    @Override
+  /*  @Override
     public long create(String type, long amount, String date, String status, Account account) {
         accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "TransactionLogicFacadeImpl.create called.");
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }*/
 
     @Override
     public String addTransaction(long accountId, long amount, String type) {
@@ -45,13 +45,12 @@ public class TransactionLogicFacadeImpl implements TransactionLogicFacade {
                 status = "OK";
             }
             
-            TransactionEntityFacade transactionEntityFacadeDB = new TransactionEntityFacadeDB();
+            //TransactionEntityFacade transactionEntityFacadeDB = new TransactionEntityFacadeDB();
             Date created = new Date();
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             
             try {
-                // We should REALLY change this to use the private member variable!!!!
-                long transId = transactionEntityFacadeDB.create(type, amount, dateFormat.format(created), status, account);         
+                long transId = transactionEntityFacade.create(type, amount, dateFormat.format(created), status, account);         
                 accountEntityFacadeDB.addTransaction(accountId, transId);
                 return status;
             } catch(Exception e) {
@@ -67,11 +66,11 @@ public class TransactionLogicFacadeImpl implements TransactionLogicFacade {
         
     }
 
-    @Override
+/*    @Override
     public Transaction find(long id) {
         accountLogger.log(AccountLogger.AccountLoggerLevel.DEBUG, "TransactionLogicFacadeImpl.find called.");
         
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+    */
 }

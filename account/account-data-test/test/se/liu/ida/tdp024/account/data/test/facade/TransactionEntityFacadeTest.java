@@ -38,23 +38,13 @@ public class TransactionEntityFacadeTest {
     }
     
     @Test
-    public void testFindAllTransactions() {
+    public void testFind() {
         long accountId = accountEntityFacade.create("PKey", "TYPE", "BKey");
         Account account = accountEntityFacade.find(accountId);
-        transactionEntityFacade.create("test", 5, "2015", "ok", account);
-        transactionEntityFacade.create("test", 5, "2015", "ok", account);
-        transactionEntityFacade.create("test", 5, "2015", "ok", account);
-        transactionEntityFacade.create("test", 5, "2015", "ok", account);
-        List<Transaction> transList = accountEntityFacade.findAllTransactions(accountId);
-        System.out.println(transList);
-        System.out.println("Translist above");
-        for(Transaction t : transList) {
-            System.out.println(t.getStatus());
-        }
-        
-        Assert.assertFalse(transList.isEmpty());
- 
-        
-    }
+        long transId = transactionEntityFacade.create("test", 5, "2015", "ok", account);
+        Transaction transaction = transactionEntityFacade.find(transId);
+        Assert.assertNotNull(transaction);
+        Assert.assertEquals(transId, transaction.getId());
+    }  
     
 }

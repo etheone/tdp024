@@ -2,11 +2,11 @@
 
 <!-- replace XX in the project:name attribute and the file name with the group number mentioned in your username, for example b8 -->
 
-<project name="tdp024_grupp_xx_2016" default="default" xmlns:jacoco="antlib:org.jacoco.ant" xmlns:sonar="antlib:org.sonar.ant">
+<project name="tdp024_grupp_a2_2016" default="default" xmlns:jacoco="antlib:org.jacoco.ant" xmlns:sonar="antlib:org.sonar.ant">
 
 	<!-- Replace "your_username" and "your_password" with the username and password  you have received -->	
-	<property name="sonar.login" value="your_username" />
-	<property name="sonar.password" value="your_password" />
+	<property name="sonar.login" value="grupp-a2-2016" />
+	<property name="sonar.password" value="qcsf72td" />
 
 	<!-- Default -->
 	<target name="default">

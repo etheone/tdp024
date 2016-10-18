@@ -10,8 +10,6 @@ public interface AccountLogicFacade {
     
     public long create(String personName, String accountType, String bankName);
     
-    public Account findByName(String name);
-    
     public String findAllAccounts(String name);
     
     public String findAllTransactions(long accountId);

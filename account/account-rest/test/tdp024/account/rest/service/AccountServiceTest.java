@@ -15,11 +15,13 @@ import se.liu.ida.tdp024.account.data.api.entity.Transaction;
 import se.liu.ida.tdp024.account.data.api.util.StorageFacade;
 import se.liu.ida.tdp024.account.data.impl.db.entity.AccountDB;
 import se.liu.ida.tdp024.account.data.impl.db.entity.TransactionDB;
+import se.liu.ida.tdp024.account.data.impl.db.util.StorageFacadeDB;
 import se.liu.ida.tdp024.account.rest.service.AccountService;
 import se.liu.ida.tdp024.account.util.http.HTTPHelper;
 import se.liu.ida.tdp024.account.util.http.HTTPHelperImpl;
 import se.liu.ida.tdp024.account.util.json.AccountJsonSerializer;
 import se.liu.ida.tdp024.account.util.json.AccountJsonSerializerImpl;
+import se.liu.ida.tdp024.account.util.logger.TransactionDTO;
 
 public class AccountServiceTest {
 
@@ -27,41 +29,34 @@ public class AccountServiceTest {
     HTTPHelper httpHelper = new HTTPHelperImpl();
     public static final String ENDPOINT = "http://localhost:8080/AccountDB-rest/";
     private static final AccountJsonSerializer jsonSerializer = new AccountJsonSerializerImpl();    
-
+    public StorageFacade storageFacade = new StorageFacadeDB();
+    
+    @After
+    public void tearDown() {
+        storageFacade.emptyStorage();
+    }
+    
     @Test
     public void testCreate() {
         
         AccountService accountService = new AccountService();
 
         {
-            String name = "Tommy Lindman";
+            String name = "Marcus Bendtsen";
             String accountType = "CHECK";
-            String bankName = "Bank of Sverige";
+            String bankName = "SWEDBANK";
 
-            //Response response = AccountDBService.create(name, AccountDBType, bankName);
+            Response response = accountService.create(name, accountType, bankName);
 
-            //Assert.assertEquals(200, response.getStatus());
+            Assert.assertEquals(200, response.getStatus());
         }
         {
             String name = "Marcus Bendtsen";
             String bank = "SWEDBANK";
             String accountType = "CREDITCARD";
             Response response = accountService.create(name, accountType, bank);
-            System.out.println("The response after bad create:");
-            System.out.println(response.getEntity().toString());
-            //String response = httpHelper.get(FinalConstants.ENDPOINT + "AccountDB/create/", "name", name, "bank", bank, "AccountDBtype", AccountDBType);
-            //Assert.assertEquals("FAILED", response);
-        }
-        {
-            String name = "Marcus Bendtsen";
-            String bank = "SWEDBANK";
-            String accountType = "CREDITCARD";
             
-            String response = httpHelper.get(ENDPOINT + "account/create", "name", name, "bank", bank, "accounttype", accountType);
-            System.out.println("Response: " + response);
-            if (response.equals("OK"))
-                System.out.println("Response is OK...");
-            Assert.assertEquals("FAILED", response);
+            Assert.assertEquals("FAILED", response.getEntity().toString());
         }
     }
     
@@ -74,13 +69,18 @@ public class AccountServiceTest {
         String bank = "SWEDBANK";
         String accountType = "SAVINGS";
         Response response = accountService.create(name, accountType, bank);
-        //System.out.println("The response after bad create:");
-        //System.out.println(response.getEntity().toString());
-        
+
         Response res = accountService.find(name);
-        System.out.println("=====================================================");
-        System.out.println("What we get back after find:");
-        System.out.println(res.getEntity().toString());
+        
+        AccountDB[] allAccountsz = jsonSerializer.fromJson(res.getEntity().toString(), AccountDB[].class);
+        System.out.println(allAccountsz[0]);
+        List<AccountDB> allAccounts = new ArrayList<AccountDB>();
+        for(AccountDB a: allAccountsz) {
+            allAccounts.add(a);
+        }
+
+        Assert.assertEquals(1, allAccounts.size());
+        Assert.assertEquals("SAVINGS", allAccounts.get(0).getAccountType());
     }
     
     @Test
@@ -92,17 +92,22 @@ public class AccountServiceTest {
         String bank = "SWEDBANK";
         String accountType = "SAVINGS";
         Response response = accountService.create(name, accountType, bank);
-        //System.out.println("The response after bad create:");
-        //System.out.println(response.getEntity().toString());
         
-       accountService.credit(1, 200);
-       accountService.credit(1, 200);
-       
-        
+        accountService.credit(1, 200);
+        accountService.credit(1, 200);
+        accountService.debit(1, 200);
         Response res = accountService.findTransactions(1);
-        System.out.println("=====================================================");
-        System.out.println("What we get back after find:");
-        System.out.println(res.getEntity().toString());
+       
+        String allTransactionsJson = res.getEntity().toString();
+        
+        
+        TransactionDTO[] allTransactionz = jsonSerializer.fromJson(allTransactionsJson, TransactionDTO[].class);
+        List<TransactionDTO> allTransactions = new ArrayList<TransactionDTO>();
+        for(TransactionDTO t: allTransactionz) {
+            allTransactions.add(t);
+        }
+
+        Assert.assertEquals(3, allTransactions.size());
     }
     
     
